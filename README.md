@@ -1,16 +1,37 @@
-# React + Vite
+# 🐍 한성 AX 융합 튜터링: 파이썬 프로그래밍 아카이브
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+2026학년도 1학기 미래플러스대학 재학생을 대상으로 진행하는 파이썬 프로그래밍 튜터링 아카이브 웹사이트입니다.
 
-Currently, two official plugins are available:
+## 🚀 사이트 업데이트 및 배포 방법 (중요)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+이 프로젝트는 GitHub Pages를 통해 배포되고 있습니다. 새로운 튜터링 자료를 추가하거나 코드를 수정한 뒤, 실제 인터넷(웹사이트)에 반영하려면 **반드시 배포 명령어를 실행해야 합니다.**
 
-## React Compiler
+### 📌 언제 `npm run deploy`를 실행해야 하나요?
+- `src/data/notes/` 폴더에 새로운 주차의 **마크다운(.md) 노트를 추가**하거나 내용을 수정했을 때
+- `src/data/curriculum.js` 파일의 **커리큘럼 요약이나 제목을 변경**했을 때
+- 코드를 수정하고 로컬 테스트(`npm run dev`)를 마친 후, **다른 사람들이 접속하는 실제 사이트에 최신 버전을 퍼블리싱**하고 싶을 때
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 💻 배포 명령어
+수정을 모두 마치고 저장하셨다면, VS Code 터미널에서 아래 명령어를 실행하세요.
+```bash
+npm run deploy
+```
+*(위 명령어를 실행하면 최신 코드가 자동으로 빌드되어 GitHub Pages에 업데이트됩니다.)*
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 💡 개발 관련 참고 사항 (Router 설정)
+
+본 웹사이트는 GitHub Pages 정적 호스팅 환경의 한계(새로고침 시 404 에러 발생)를 극복하기 위해 **`HashRouter`**를 사용하고 있습니다.
+
+### `BrowserRouter` vs `HashRouter` 차이점
+- **`BrowserRouter`**: `domain.com/note/1` 처럼 깔끔한 주소를 사용합니다. 하지만 GitHub Pages에서는 새로고침 시 서버가 저런 폴더가 실제로 존재하지 않는다고 판단해 **404 에러**를 발생시킵니다.
+- **`HashRouter` (현재 적용됨)**: `domain.com/#/note/1` 처럼 주소 중간에 `#` 기호가 들어갑니다. 웹 브라우저는 `#` 뒤의 내용을 서버에 요청하지 않고 오직 내 브라우저 안에서만 처리(화면 전환)하므로, **GitHub Pages에서도 에러 없이 완벽하게 페이지 이동이 가능**한 가장 안전한 방식입니다.
+
+---
+
+## 🛠 로컬 개발 환경 실행 (테스트용)
+내 컴퓨터에서 화면을 미리 보면서 개발하고 싶을 때는 아래 명령어를 사용하세요.
+```bash
+npm run dev
+```
