@@ -40,7 +40,8 @@ function App() {
       <header className="hero">
         <h1 className="hero-title">Python Log: 6 Weeks of Learning</h1>
         <p className="hero-subtitle">
-          A comprehensive archive documenting the journey through fundamental Python concepts
+          2026학년도 1학기 미래플러스대학 한성 AX 융합 튜터링<br />
+          '파이썬 프로그래밍' 과목의 6주간 학습 및 멘토링 과정을 기록하는 아카이브입니다.
         </p>
       </header>
 
