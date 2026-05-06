@@ -128,7 +128,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
  *
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
- */const ND=[["rect",{width:"14",height:"14",x:"8",y:"8",rx:"2",ry:"2",key:"17jyea"}],["path",{d:"M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2",key:"zix9uf"}]],kD=jb("copy",ND),ru=`# 📝 [1주차] 파이썬 입문 및 개발 환경 구축
+ */const ND=[["rect",{width:"14",height:"14",x:"8",y:"8",rx:"2",ry:"2",key:"17jyea"}],["path",{d:"M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2",key:"zix9uf"}]],kD=jb("copy",ND),OD=`# 📝 [1주차] 파이썬 입문 및 개발 환경 구축
 
 파이썬(Python)은 간결하고 읽기 쉬운 문법을 바탕으로 데이터 분석, 인공지능, 웹 개발 등 다양한 분야에서 활용되는 강력한 프로그래밍 언어입니다. 1주차에는 파이썬의 기본 개념을 가볍게 이해하고, 내 컴퓨터에서 직접 코드를 작성하고 실행할 수 있는 '개발 환경'을 완벽하게 세팅하는 것을 목표로 합니다.
 
@@ -179,5 +179,113 @@ print(my_name, "님, 1주차 학습을 축하합니다!")
 1. 우측 상단의 ▷ (재생 버튼)을 클릭하거나, 하단 터미널(Terminal) 창에 \`python hello.py\`를 입력하여 코드를 실행합니다.
 2. 터미널 창에 입력한 문장이 성공적으로 출력되는지 확인합니다.
 
----`,OD=({node:e,inline:t,className:n,children:a,...r})=>{const i=/language-(\w+)/.exec(n||""),[l,o]=N.useState(!1),s=String(a).replace(/\n$/,""),u=()=>{navigator.clipboard.writeText(s),o(!0),setTimeout(()=>o(!1),2e3)};return!t&&i?$.jsxs("div",{className:"code-block-wrapper",children:[$.jsxs("button",{className:"copy-button",onClick:u,children:[l?$.jsx(_D,{size:14}):$.jsx(kD,{size:14}),$.jsx("span",{children:l?"Copied!":"Copy"})]}),$.jsx(Wv,{style:bD,language:i[1],PreTag:"div",customStyle:{margin:0,padding:"24px",borderRadius:"12px",fontSize:"0.9rem",lineHeight:"1.5",backgroundColor:"#1E1E1E"},...r,children:s})]}):$.jsx("code",{className:n,...r,children:a})};function CD(){const{week:e}=zN(),t=parseInt(e,10),n=rc.find(l=>l.week===t),[a,r]=N.useState([]);N.useEffect(()=>{if(window.scrollTo(0,0),t===1&&ru){const l=[],o=/^(##\s)(.*)/gm;let s;for(;(s=o.exec(ru))!==null;)l.push(s[2].trim());r(l)}else r([])},[t]);const i=t===1?ru:`# 콘텐츠가 아직 준비되지 않았습니다.
-추후 업데이트 예정입니다.`;return n?$.jsxs("div",{className:"note-layout",children:[$.jsxs("aside",{className:"sidebar",children:[$.jsxs(Ni,{to:"/",className:"back-link",children:[$.jsx(wD,{size:18}),"Back to Home"]}),$.jsxs("div",{className:"sidebar-header",children:[$.jsxs("span",{className:"sidebar-week-label",children:["WEEK ",n.week]}),$.jsx("h2",{className:"sidebar-title",children:n.title})]}),a.length>0&&$.jsxs("div",{className:"sidebar-section",children:[$.jsx("h3",{className:"sidebar-section-title",children:"CONTENTS"}),$.jsx("ul",{className:"sidebar-menu",children:a.map((l,o)=>$.jsx("li",{className:"sidebar-menu-item",children:$.jsx("a",{href:`#${l.replace(/\s+/g,"-").toLowerCase()}`,children:l})},o))})]}),$.jsxs("div",{className:"sidebar-section",children:[$.jsx("h3",{className:"sidebar-section-title",children:"OTHER WEEKS"}),$.jsx("ul",{className:"sidebar-menu",children:rc.map(l=>$.jsx("li",{className:"sidebar-menu-item",children:$.jsxs(Ni,{to:`/note/${l.week}`,className:l.week===t?"active":"",children:["Week ",l.week]})},l.week))})]})]}),$.jsx("main",{className:"note-content",children:$.jsx("div",{className:"note-content-inner",children:$.jsx(mL,{components:{code:OD,h1:({node:l,...o})=>{var u;const s=(u=o.children[0])==null?void 0:u.toString().replace(/\s+/g,"-").toLowerCase();return $.jsx("h1",{id:s,...o})},h2:({node:l,...o})=>{var u;const s=(u=o.children[0])==null?void 0:u.toString().replace(/\s+/g,"-").toLowerCase();return $.jsx("h2",{id:s,...o})}},children:i})})})]}):$.jsx("div",{className:"container",children:"Week not found"})}function ID(){return $.jsx(_k,{children:$.jsxs(ek,{children:[$.jsx(nc,{path:"/",element:$.jsx(Dk,{})}),$.jsx(nc,{path:"/note/:week",element:$.jsx(CD,{})})]})})}tN.createRoot(document.getElementById("root")).render($.jsx(N.StrictMode,{children:$.jsx(ID,{})}));
+---`,CD=`# 📝 [2주차] 변수와 자료형 이해
+
+이번 주차에서는 프로그램이 데이터를 어떻게 기억하고 다루는지 학습합니다. 데이터를 담는 그릇인 '변수'의 개념을 익히고, 파이썬에서 다루는 데이터의 종류(자료형), 그리고 사용자와 상호작용하는 기본 입력과 출력 방법을 알아봅니다.
+
+## 1. 데이터 변수와 사용법 (Variables)
+
+변수는 데이터를 담아두는 '이름표가 붙은 상자'와 같습니다. 상자에 이름을 붙여두고, 필요할 때마다 그 안에 든 데이터를 꺼내 쓰거나 새로운 데이터를 넣어 내용을 바꿀 수 있습니다.
+
+- **변수 만들기:** 파이썬에서는 \`변수이름 = 값\` 형태로 변수를 만듭니다.
+- 여기서 \`=\` 기호는 '같다'는 뜻이 아니라, 오른쪽에 있는 값을 왼쪽 변수에 '넣는다(대입한다)'는 의미입니다.
+
+\`\`\`python
+# 변수 선언 및 데이터 할당
+student_name = "김튜티"
+student_age = 20
+
+# 변수 사용 (저장된 데이터 출력)
+print(student_name)
+print(student_age)
+
+# 변수 값 변경하기 (상자 안의 내용물 바꾸기)
+student_age = 21
+print("변경된 나이:", student_age)
+\`\`\`
+
+## 2. 기본 자료형 학습 (Data Types)
+
+상자(변수)에 담을 수 있는 내용물의 종류를 '자료형'이라고 합니다. 데이터의 성격에 따라 컴퓨터가 처리하는 방식이 다르기 때문에 기본 자료형을 구분하는 것은 매우 중요합니다.
+
+- **정수형 (\`int\`):** 소수점이 없는 숫자 (예: \`10\`, \`5\`, \`0\`)
+- **실수형 (\`float\`):** 소수점이 있는 숫자 (예: \`3.14\`, \`1.5\`)
+- **문자열 (\`str\`):** 텍스트 데이터. 단어나 문장을 따옴표(\`'\` 또는 \`"\`)로 감싸서 표현 (예: \`"Hello"\`, \`'파이썬'\`)
+- **논리형 (\`bool\`):** 참과 거짓을 나타내는 데이터. (예: \`True\`, \`False\`. 반드시 첫 글자는 대문자로 작성해야 합니다.)
+
+\`\`\`python
+# 다양한 자료형 변수 선언
+level = 1          # 정수(int)
+score = 95.5       # 실수(float)
+subject = "Python" # 문자열(str)
+is_passed = True   # 논리(bool)
+
+# type() 함수를 사용하면 해당 변수에 담긴 데이터의 종류를 확인할 수 있습니다.
+print(type(level))   # <class 'int'> 출력
+print(type(score)) # <class 'float'> 출력
+print(type(subject)) # <class 'str'> 출력
+print(type(is_passed)) # <class 'bool'> 출력
+\`\`\`
+
+## 3. 간단한 입력·출력 프로그램 작성
+
+지금까지는 개발자가 코드에 직접 데이터를 적었지만, \`input()\` 함수를 사용하면 프로그램을 실행하는 사용자로부터 직접 데이터를 입력받을 수 있습니다.
+
+- **\`input("질문할 내용")\`**: 사용자의 입력을 기다립니다. **주의할 점은 사용자가 숫자를 입력하더라도, \`input()\`은 모든 입력을 '문자열(str)' 형태로 받아들입니다.**
+- **형변환 (Type Casting)**: 입력받은 숫자를 가지고 덧셈, 뺄셈 같은 수학 계산을 하려면 문자를 숫자로 형태를 바꿔주어야 합니다. 이때 \`int()\`나 \`float()\` 함수를 사용합니다.
+
+### 💻 [예시 코드] 나이 계산기 프로그램 만들기
+
+사용자에게 이름과 태어난 연도를 입력받아, 현재 나이를 계산하고 인사하는 간단한 프로그램을 작성해 봅니다.
+
+\`\`\`python
+# 1. 사용자에게 데이터 입력 받기
+user_name = input("이름을 입력하세요: ")
+birth_year = input("태어난 연도를 입력하세요 (예: 2003): ")
+
+# 2. 데이터 처리 및 계산
+# input()으로 받은 '문자열' 연도를 '정수'로 변환(int)하여 나이를 계산합니다.
+current_year = 2026
+age = current_year - int(birth_year)
+
+# 3. 결과 출력 (문자열 덧셈 연산과 print의 콤마 활용)
+print("\\n--- 결과 ---")
+print("안녕하세요, " + user_name + "님!")
+print("당신의 올해 나이는 ", age, "세입니다.", sep='', end=' ')
+print('프로그램 끝.')
+\`\`\`
+
+### print에 들어갈 수 있는 파라미터
+
+<aside>
+💡
+
+\`sep\` (Separator, 구분자)
+
+</aside>
+
+\`print()\` 함수에서 콤마(\`,\`)로 구분된 인자들 사이에 특정 문자열을 삽입
+
+**기본값**: 공백 하나 (\`' '\`)
+
+**활용**: \`print('2026', '05', '06', sep='-')\` → \`2026-05-06\`
+
+**줄바꿈**: \`print('1', '2', '3', sep='\\n')\` → 1, 2, 3이 각각 줄바꿈되어 출력
+
+<aside>
+💡
+
+\`end\` (끝)
+
+</aside>
+
+\`print()\` 문이 모든 내용을 출력한 후 맨 마지막에 출력할 내용을 설정
+
+**기본값**: 줄바꿈 문자 (\`'\\n'\`)
+
+**활용**: \`print()\` 문이 끝난 후 줄을 바꾸지 않고 이어서 출력할 때 사용
+
+**공백 유지**: \`print('Hello', end=' ')\` → \`print('World')\` → \`Hello World\`
+
+---`,ru={1:OD,2:CD},ID=({node:e,inline:t,className:n,children:a,...r})=>{const i=/language-(\w+)/.exec(n||""),[l,o]=N.useState(!1),s=String(a).replace(/\n$/,""),u=()=>{navigator.clipboard.writeText(s),o(!0),setTimeout(()=>o(!1),2e3)};return!t&&i?$.jsxs("div",{className:"code-block-wrapper",children:[$.jsxs("button",{className:"copy-button",onClick:u,children:[l?$.jsx(_D,{size:14}):$.jsx(kD,{size:14}),$.jsx("span",{children:l?"Copied!":"Copy"})]}),$.jsx(Wv,{style:bD,language:i[1],PreTag:"div",customStyle:{margin:0,padding:"24px",borderRadius:"12px",fontSize:"0.9rem",lineHeight:"1.5",backgroundColor:"#1E1E1E"},...r,children:s})]}):$.jsx("code",{className:n,...r,children:a})};function xD(){const{week:e}=zN(),t=parseInt(e,10),n=rc.find(l=>l.week===t),[a,r]=N.useState([]),i=ru[t]||`# 콘텐츠가 아직 준비되지 않았습니다.
+추후 업데이트 예정입니다.`;return N.useEffect(()=>{if(window.scrollTo(0,0),ru[t]){const l=[],o=/^(##\s)(.*)/gm;let s;for(;(s=o.exec(ru[t]))!==null;)l.push(s[2].trim());r(l)}else r([])},[t]),n?$.jsxs("div",{className:"note-layout",children:[$.jsxs("aside",{className:"sidebar",children:[$.jsxs(Ni,{to:"/",className:"back-link",children:[$.jsx(wD,{size:18}),"Back to Home"]}),$.jsxs("div",{className:"sidebar-header",children:[$.jsxs("span",{className:"sidebar-week-label",children:["WEEK ",n.week]}),$.jsx("h2",{className:"sidebar-title",children:n.title})]}),a.length>0&&$.jsxs("div",{className:"sidebar-section",children:[$.jsx("h3",{className:"sidebar-section-title",children:"CONTENTS"}),$.jsx("ul",{className:"sidebar-menu",children:a.map((l,o)=>$.jsx("li",{className:"sidebar-menu-item",children:$.jsx("a",{href:`#${l.replace(/\s+/g,"-").toLowerCase()}`,children:l})},o))})]}),$.jsxs("div",{className:"sidebar-section",children:[$.jsx("h3",{className:"sidebar-section-title",children:"OTHER WEEKS"}),$.jsx("ul",{className:"sidebar-menu",children:rc.map(l=>$.jsx("li",{className:"sidebar-menu-item",children:$.jsxs(Ni,{to:`/note/${l.week}`,className:l.week===t?"active":"",children:["Week ",l.week]})},l.week))})]})]}),$.jsx("main",{className:"note-content",children:$.jsx("div",{className:"note-content-inner",children:$.jsx(mL,{components:{code:ID,h1:({node:l,...o})=>{var u;const s=(u=o.children[0])==null?void 0:u.toString().replace(/\s+/g,"-").toLowerCase();return $.jsx("h1",{id:s,...o})},h2:({node:l,...o})=>{var u;const s=(u=o.children[0])==null?void 0:u.toString().replace(/\s+/g,"-").toLowerCase();return $.jsx("h2",{id:s,...o})}},children:i})})})]}):$.jsx("div",{className:"container",children:"Week not found"})}function LD(){return $.jsx(_k,{children:$.jsxs(ek,{children:[$.jsx(nc,{path:"/",element:$.jsx(Dk,{})}),$.jsx(nc,{path:"/note/:week",element:$.jsx(xD,{})})]})})}tN.createRoot(document.getElementById("root")).render($.jsx(N.StrictMode,{children:$.jsx(LD,{})}));
