@@ -6,7 +6,13 @@ import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import { ChevronLeft, Copy, Check } from 'lucide-react';
 import { WEEKS_DATA } from '../data/curriculum';
 import week1Md from '../data/notes/1_WEEK.md?raw';
+import week2Md from '../data/notes/2_WEEK.md?raw';
 import '../index.css';
+
+const mdFiles = {
+  1: week1Md,
+  2: week2Md,
+};
 
 const CodeBlock = ({ node, inline, className, children, ...props }) => {
   const match = /language-(\w+)/.exec(className || '');
@@ -59,14 +65,16 @@ export default function Note() {
   
   const [toc, setToc] = useState([]);
   
+  const markdownContent = mdFiles[currentWeekNum] || '# 콘텐츠가 아직 준비되지 않았습니다.\n추후 업데이트 예정입니다.';
+
   useEffect(() => {
     window.scrollTo(0, 0);
 
-    if (currentWeekNum === 1 && week1Md) {
+    if (mdFiles[currentWeekNum]) {
       const headings = [];
       const regex = /^(##\s)(.*)/gm;
       let match;
-      while ((match = regex.exec(week1Md)) !== null) {
+      while ((match = regex.exec(mdFiles[currentWeekNum])) !== null) {
         headings.push(match[2].trim());
       }
       setToc(headings);
@@ -74,8 +82,6 @@ export default function Note() {
       setToc([]);
     }
   }, [currentWeekNum]);
-
-  const markdownContent = currentWeekNum === 1 ? week1Md : '# 콘텐츠가 아직 준비되지 않았습니다.\n추후 업데이트 예정입니다.';
 
   if (!weekData) {
     return <div className="container">Week not found</div>;
