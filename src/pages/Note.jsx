@@ -7,11 +7,13 @@ import { ChevronLeft, Copy, Check } from 'lucide-react';
 import { WEEKS_DATA } from '../data/curriculum';
 import week1Md from '../data/notes/1_WEEK.md?raw';
 import week2Md from '../data/notes/2_WEEK.md?raw';
+import week3Md from '../data/notes/3_WEEK.md?raw';
 import '../index.css';
 
 const mdFiles = {
   1: week1Md,
   2: week2Md,
+  3: week3Md,
 };
 
 const CodeBlock = ({ node, inline, className, children, ...props }) => {
