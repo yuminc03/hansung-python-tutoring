@@ -8,12 +8,14 @@ import { WEEKS_DATA } from '../data/curriculum';
 import week1Md from '../data/notes/1_WEEK.md?raw';
 import week2Md from '../data/notes/2_WEEK.md?raw';
 import week3Md from '../data/notes/3_WEEK.md?raw';
+import week4Md from '../data/notes/4_WEEK.md?raw';
 import '../index.css';
 
 const mdFiles = {
   1: week1Md,
   2: week2Md,
   3: week3Md,
+  4: week4Md,
 };
 
 const CodeBlock = ({ node, inline, className, children, ...props }) => {
@@ -64,9 +66,9 @@ export default function Note() {
   const { week } = useParams();
   const currentWeekNum = parseInt(week, 10);
   const weekData = WEEKS_DATA.find((item) => item.week === currentWeekNum);
-  
+
   const [toc, setToc] = useState([]);
-  
+
   const markdownContent = mdFiles[currentWeekNum] || '# 콘텐츠가 아직 준비되지 않았습니다.\n추후 업데이트 예정입니다.';
 
   useEffect(() => {
@@ -96,7 +98,7 @@ export default function Note() {
           <ChevronLeft size={18} />
           Back to Home
         </Link>
-        
+
         <div className="sidebar-header">
           <span className="sidebar-week-label">WEEK {weekData.week}</span>
           <h2 className="sidebar-title">{weekData.title}</h2>
@@ -120,8 +122,8 @@ export default function Note() {
           <ul className="sidebar-menu">
             {WEEKS_DATA.map((item) => (
               <li key={item.week} className="sidebar-menu-item">
-                <Link 
-                  to={`/note/${item.week}`} 
+                <Link
+                  to={`/note/${item.week}`}
                   className={item.week === currentWeekNum ? 'active' : ''}
                 >
                   Week {item.week}
@@ -137,11 +139,11 @@ export default function Note() {
           <ReactMarkdown
             components={{
               code: CodeBlock,
-              h1: ({node, ...props}) => {
+              h1: ({ node, ...props }) => {
                 const id = props.children[0]?.toString().replace(/\s+/g, '-').toLowerCase();
                 return <h1 id={id} {...props} />;
               },
-              h2: ({node, ...props}) => {
+              h2: ({ node, ...props }) => {
                 const id = props.children[0]?.toString().replace(/\s+/g, '-').toLowerCase();
                 return <h2 id={id} {...props} />;
               }
