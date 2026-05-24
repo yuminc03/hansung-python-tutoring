@@ -297,3 +297,36 @@ a {
   background-color: rgba(255, 255, 255, 0.2);
   color: #FFFFFF;
 }
+
+/* Table Styles */
+.note-content-inner table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 32px 0;
+  font-size: 0.95rem;
+  box-shadow: var(--shadow-card);
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+}
+
+.note-content-inner th, .note-content-inner td {
+  padding: 14px 20px;
+  text-align: left;
+}
+
+.note-content-inner th {
+  background-color: #F3F4F6;
+  color: var(--text-primary);
+  font-weight: 600;
+  border-bottom: 2px solid var(--border-color);
+}
+
+.note-content-inner td {
+  border-bottom: 1px solid var(--border-color);
+  background-color: var(--bg-card);
+}
+
+.note-content-inner tr:last-child td {
+  border-bottom: none;
+}

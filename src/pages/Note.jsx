@@ -9,6 +9,7 @@ import week1Md from '../data/notes/1_WEEK.md?raw';
 import week2Md from '../data/notes/2_WEEK.md?raw';
 import week3Md from '../data/notes/3_WEEK.md?raw';
 import week4Md from '../data/notes/4_WEEK.md?raw';
+import remarkGfm from 'remark-gfm';
 import '../index.css';
 
 const mdFiles = {
@@ -137,6 +138,7 @@ export default function Note() {
       <main className="note-content">
         <div className="note-content-inner">
           <ReactMarkdown
+            remarkPlugins={[remarkGfm]}
             components={{
               code: CodeBlock,
               h1: ({ node, ...props }) => {
