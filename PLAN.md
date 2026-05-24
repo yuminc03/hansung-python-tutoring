@@ -4,9 +4,10 @@
 
 ## 1. 개요 및 기술 스택
 - **프레임워크**: React 18, Vite (SPA)
-- **라우팅**: React Router DOM
+- **라우팅**: React Router DOM (`HashRouter` 적용으로 GitHub Pages 호스팅 환경 새로고침 404 에러 원천 차단)
 - **스타일링**: Vanilla CSS + CSS Variables (디자인 기획서의 디테일한 여백과 색상을 완벽히 통제)
 - **기능 패키지**: `react-markdown` (마크다운 파싱), `react-syntax-highlighter` (코드 하이라이팅), `lucide-react` (아이콘)
+- **배포 자동화**: `gh-pages`를 사용하여 `npm run deploy` 실행 시 빌드 및 `.nojekyll` 생성을 동시 수행하여 배포.
 - **폰트**: Pretendard (애플 스타일의 모던 산세리프)
 
 ## 2. 디자인 시스템 (CSS 변수)
@@ -37,3 +38,11 @@
 ## 4. 데이터 및 콘텐츠 관리
 - 주차별 실제 학습 내용은 `src/data/notes/` 폴더 내에 마크다운(`.md`) 파일로 작성.
 - 코드를 수정하지 않고 마크다운 텍스트만 업데이트해도 웹페이지에 자동으로 반영되도록 구성.
+- `src/pages/Note.jsx`에 각 주차별 마크다운 파일을 `import` 처리하여 `mdFiles` 객체에 매핑 관리.
+
+## 5. 현재 구현 상태 및 향후 계획
+- **현재 구현 상태**: 1주차 ~ 4주차 콘텐츠 작성 및 화면 연동 완료, 실제 도메인 배포 완료.
+- **다음 진행 계획**:
+  1. **5주차 콘텐츠 연동**: `src/data/notes/5_WEEK.md` 파일 작성 및 `Note.jsx` 매핑 연동.
+  2. **6주차 콘텐츠 연동**: `src/data/notes/6_WEEK.md` 파일 작성 및 `Note.jsx` 매핑 연동.
+  3. **반응형 디자인 폴리싱**: 모바일 기기 대응을 위해 사이드바 토글 혹은 햄버거 메뉴 레이아웃 적용.
