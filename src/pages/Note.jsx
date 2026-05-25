@@ -9,6 +9,7 @@ import week1Md from '../data/notes/1_WEEK.md?raw';
 import week2Md from '../data/notes/2_WEEK.md?raw';
 import week3Md from '../data/notes/3_WEEK.md?raw';
 import week4Md from '../data/notes/4_WEEK.md?raw';
+import week5Md from '../data/notes/5_WEEK.md?raw';
 import remarkGfm from 'remark-gfm';
 import '../index.css';
 
@@ -17,6 +18,7 @@ const mdFiles = {
   2: week2Md,
   3: week3Md,
   4: week4Md,
+  5: week5Md,
 };
 
 const CodeBlock = ({ node, inline, className, children, ...props }) => {
