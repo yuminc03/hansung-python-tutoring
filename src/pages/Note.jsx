@@ -150,6 +150,19 @@ export default function Note() {
               h2: ({ node, ...props }) => {
                 const id = props.children[0]?.toString().replace(/\s+/g, '-').toLowerCase();
                 return <h2 id={id} {...props} />;
+              },
+              a: ({ node, href, children, ...props }) => {
+                const isExternal = href?.startsWith('http://') || href?.startsWith('https://');
+                return (
+                  <a
+                    href={href}
+                    target={isExternal ? '_blank' : undefined}
+                    rel={isExternal ? 'noopener noreferrer' : undefined}
+                    {...props}
+                  >
+                    {children}
+                  </a>
+                );
               }
             }}
           >
