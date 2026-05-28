@@ -33,6 +33,8 @@
   - [x] 4주차 학습 노트(`4_WEEK.md`) 최신 버전 웹사이트 완전 반영 (`src/data/notes/4_WEEK.md`)
   - [x] 5주차 학습 노트(`5_WEEK.md`) 최신 버전 웹사이트 완전 반영 (`src/data/notes/5_WEEK.md`)
   - [x] 마크다운 내 `<aside>` 등 미지원 HTML 태그 렌더링 이슈 해결 완료 (인용구 문법 변환)
+- **기능 개선 및 사용성 보완**
+  - [x] Google Colab 및 외부 링크 새 창(`target="_blank"`)에서 열기 연동 (`rel="noopener noreferrer"` 적용으로 보안 및 성능 강화)
 - **최종 배포 (Deploy)**
   - [x] `gh-pages`와 `.nojekyll` 설정을 통한 GitHub Pages 자동 배포 스크립트 구축 및 실제 배포 완료
 
