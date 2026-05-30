@@ -157,27 +157,44 @@ while True: # MBTI 입력을 틀리지 않고 입력했을 때 결과 출력 후
 3 빙고를 달성하면 게임을 종료한다.
 
 ```python
-import random
+import random # 랜덤 숫자를 생성하기 위한 모듈을 불러옵니다.
 
 # 동전 게임
+count = 0 # 게임을 시도한 총 횟수를 기억할 변수입니다.
+bingo_count = 0 # 동전의 앞/뒤를 맞춘(빙고) 횟수를 기억할 변수입니다.
 
-count = 0
-bingo_count = 0 # 빙고가 나온 횟수
+while (True): # 무한 루프를 시작합니다. (게임을 끝낼 조건이 만족될 때까지 계속 반복)
+    count = count + 1 # 게임이 한 번 시작될 때마다 시도 횟수를 1씩 증가시킵니다.
+    print('***', count, '회 동전게임 ***') # 현재 몇 번째 게임인지 화면에 출력합니다.
 
-while (True):
-    count = count + 1
-    print('***', count, '회 동전게임 ***')
-    r = random.randrange(0, 2) # 컴퓨터가 random 생성 (앞:0, 뒤:1)
-    direction = int(input('앞(0)/뒤(1) 입력: '))
+    r = random.randrange(0, 2) # 컴퓨터가 0(앞면) 또는 1(뒷면) 중 하나를 무작위로 선택합니다.
+    direction = int(input('앞(0)/뒤(1) 입력: ')) # 사용자에게 0 또는 1을 입력받고, 계산을 위해 정수(int)로 변환합니다.
 
-    if r == direction:
-        print('Bingo!')
-        bingo_count = bingo_count + 1
-    else:
-        print('Not Bingo...')
+    if r == direction: # 컴퓨터가 뽑은 숫자와 사용자가 입력한 숫자가 같다면
+        print('Bingo!') # 정답(빙고) 메시지를 출력합니다.
+        bingo_count = bingo_count + 1 # 정답을 맞췄으므로 빙고 횟수를 1 증가시킵니다.
+    else: # 컴퓨터가 뽑은 숫자와 사용자가 입력한 숫자가 다르다면
+        print('Not Bingo...') # 오답 메시지를 출력합니다.
 
-    if bingo_count == 3:
-        print('빙고를 3번 맞춰서 게임을 종료합니다.')
-        print('*** 총 시도 횟수: ', count, '회 ***')
-        break
+    if bingo_count == 3: # 만약 지금까지 누적된 빙고 횟수가 총 3번이 되었다면
+        print('빙고를 3번 맞춰서 게임을 종료합니다.') # 종료 안내 메시지를 띄웁니다.
+        print('*** 총 시도 횟수: ', count, '회 ***') # 게임을 총 몇 번 시도했는지 알려줍니다.
+        break # while 무한 루프를 완전히 빠져나가며 게임을 최종 종료합니다.
 ```
+
+### 📝 동전 게임 코드 한 줄 해석 표
+
+| **코드** | **상세 설명** |
+| --- | --- |
+| `import random` | 파이썬이 기본으로 제공하는 '랜덤 도구 상자'를 가져옵니다. 무작위 숫자를 뽑을 때 필요합니다. |
+| `count = 0`<br>`bingo_count = 0` | 게임 횟수와 맞춘 횟수를 기록할 빈 상자(변수) 2개를 만들고 0으로 초기화합니다. |
+| `while (True):` | 조건이 항상 참(`True`)이므로 무한히 반복되는 루프를 엽니다. 안에 있는 코드들이 계속 반복 실행됩니다. |
+| `count = count + 1` | 루프가 한 바퀴 돌 때마다(게임 1회 진행) 전체 시도 횟수를 1씩 올립니다. |
+| `print('***', count, '회...')` | 방금 1 증가시킨 `count` 변수를 사용해 현재 몇 번째 판인지 화면에 보여줍니다. |
+| `r = random.randrange(0, 2)` | 컴퓨터가 0부터 1까지(2 미만)의 숫자 중 하나를 몰래 골라서 `r`이라는 상자에 담습니다. |
+| `direction = int(input(...))` | `input`으로 사용자의 대답을 받고, 숫자 비교를 하기 위해 `int()`를 씌워 문자를 정수로 바꿔줍니다. |
+| `if r == direction:` | 컴퓨터가 뽑은 숫자(`r`)와 내가 입력한 숫자(`direction`)가 똑같은지(`==`) 비교합니다. |
+| `print('Bingo!')`<br>`bingo_count = bingo_count + 1` | 위 조건이 참이면 'Bingo!'를 출력하고, 정답을 맞춘 횟수 상자에 1을 더해줍니다. |
+| `else:`<br>`print('Not Bingo...')` | 위 조건이 거짓이면(둘의 숫자가 다르면) 아쉽다는 메시지를 출력합니다. |
+| `if bingo_count == 3:` | 매 판이 끝날 때마다, 지금까지 맞춘 정답 횟수가 목표치인 3번이 되었는지 검사합니다. |
+| `print(...)`<br>`break` | 정답 횟수가 3번이 되면 결과 화면을 띄워주고, `break`를 사용해 빙글빙글 돌던 `while` 무한 루프를 깨고 탈출합니다. |
