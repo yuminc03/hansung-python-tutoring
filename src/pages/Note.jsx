@@ -11,6 +11,7 @@ import week3Md from '../data/notes/3_WEEK.md?raw';
 import week4Md from '../data/notes/4_WEEK.md?raw';
 import week5Md from '../data/notes/5_WEEK.md?raw';
 import remarkGfm from 'remark-gfm';
+import rehypeRaw from 'rehype-raw';
 import '../index.css';
 
 const mdFiles = {
@@ -141,6 +142,7 @@ export default function Note() {
         <div className="note-content-inner">
           <ReactMarkdown
             remarkPlugins={[remarkGfm]}
+            rehypePlugins={[rehypeRaw]}
             components={{
               code: CodeBlock,
               h1: ({ node, ...props }) => {
