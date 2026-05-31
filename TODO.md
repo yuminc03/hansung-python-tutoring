@@ -13,7 +13,7 @@
 
 - **프로젝트 및 환경 초기화**
   - [x] Vite + React 셋업 완료
-  - [x] 라우팅 및 마크다운 렌더링에 필요한 패키지 설치 (`react-router-dom`, `react-markdown`, `react-syntax-highlighter`, `lucide-react`)
+  - [x] 라우팅 및 마크다운 렌더링에 필요한 패키지 설치 (`react-router-dom`, `react-markdown`, `react-syntax-highlighter`, `lucide-react`, `rehype-raw`)
 - **디자인 및 글로벌 스타일링**
   - [x] Pretendard 폰트 적용
   - [x] CSS 변수(Variables)를 활용한 전역 디자인 토큰 구성
