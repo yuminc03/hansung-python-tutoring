@@ -6,7 +6,7 @@
 - **프레임워크**: React 18, Vite (SPA)
 - **라우팅**: React Router DOM (`HashRouter` 적용으로 GitHub Pages 호스팅 환경 새로고침 404 에러 원천 차단)
 - **스타일링**: Vanilla CSS + CSS Variables (디자인 기획서의 디테일한 여백과 색상을 완벽히 통제)
-- **기능 패키지**: `react-markdown` (마크다운 파싱), `react-syntax-highlighter` (코드 하이라이팅), `lucide-react` (아이콘)
+- **기능 패키지**: `react-markdown` (마크다운 파싱), `rehype-raw` (HTML 태그 지원), `react-syntax-highlighter` (코드 하이라이팅), `lucide-react` (아이콘)
 - **배포 자동화**: `gh-pages`를 사용하여 `npm run deploy` 실행 시 빌드 및 `.nojekyll` 생성을 동시 수행하여 배포.
 - **폰트**: Pretendard (애플 스타일의 모던 산세리프)
 
