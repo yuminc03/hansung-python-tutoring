@@ -1,12 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { WEEKS_DATA } from '../data/curriculum';
+import canolaPythonLogo from '../assets/canola_python.svg';
 import '../index.css';
 
 export default function Home() {
   return (
     <div className="container">
       <header className="hero">
+        <div className="hero-logo-container">
+          <img src={canolaPythonLogo} alt="Canola Python Logo" className="hero-logo" />
+        </div>
         <h1 className="hero-title">Python Log: 6 Weeks of Learning</h1>
         <p className="hero-subtitle">
           2026학년도 1학기 미래플러스대학 한성 AX 융합 튜터링<br />

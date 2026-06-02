@@ -151,6 +151,11 @@ export default function Note() {
         </Link>
 
         <div className="sidebar-header">
+          <div className="sidebar-logo-container">
+            <Link to="/">
+              <img src={`${import.meta.env.BASE_URL}favicon.svg`} alt="Canola Python Logo" className="sidebar-logo" />
+            </Link>
+          </div>
           <span className="sidebar-week-label">WEEK {weekData.week}</span>
           <h2 className="sidebar-title">{weekData.title}</h2>
         </div>

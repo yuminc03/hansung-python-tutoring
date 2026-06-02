@@ -44,6 +44,17 @@ a {
   margin-bottom: 64px;
 }
 
+.hero-logo-container {
+  margin-bottom: 24px;
+}
+
+.hero-logo {
+  width: 96px;
+  height: 96px;
+  object-fit: contain;
+  border-radius: 20px;
+}
+
 .hero-title {
   font-size: 2.75rem;
   font-weight: 700;
@@ -154,6 +165,23 @@ a {
 
 .sidebar-header {
   margin-bottom: 40px;
+}
+
+.sidebar-logo-container {
+  margin-bottom: 20px;
+  display: inline-flex;
+}
+
+.sidebar-logo {
+  width: 54px;
+  height: 54px;
+  object-fit: contain;
+  border-radius: 12px;
+  transition: transform 0.2s ease;
+}
+
+.sidebar-logo:hover {
+  transform: scale(1.05);
 }
 
 .sidebar-week-label {
