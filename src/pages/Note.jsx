@@ -114,11 +114,25 @@ export default function Note() {
           <div className="sidebar-section">
             <h3 className="sidebar-section-title">CONTENTS</h3>
             <ul className="sidebar-menu">
-              {toc.map((heading, idx) => (
-                <li key={idx} className="sidebar-menu-item">
-                  <a href={`#${heading.replace(/\s+/g, '-').toLowerCase()}`}>{heading}</a>
-                </li>
-              ))}
+              {toc.map((heading, idx) => {
+                const targetId = heading.replace(/\s+/g, '-').toLowerCase();
+                return (
+                  <li key={idx} className="sidebar-menu-item">
+                    <a
+                      href={`#${targetId}`}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        const element = document.getElementById(targetId);
+                        if (element) {
+                          element.scrollIntoView({ behavior: 'smooth' });
+                        }
+                      }}
+                    >
+                      {heading}
+                    </a>
+                  </li>
+                );
+              })}
             </ul>
           </div>
         )}
@@ -148,11 +162,17 @@ export default function Note() {
             components={{
               code: CodeBlock,
               h1: ({ node, ...props }) => {
-                const id = props.children[0]?.toString().replace(/\s+/g, '-').toLowerCase();
+                const headingText = React.Children.toArray(props.children)
+                  .map((child) => (typeof child === 'string' || typeof child === 'number' ? child : ''))
+                  .join('');
+                const id = headingText.trim().replace(/\s+/g, '-').toLowerCase();
                 return <h1 id={id} {...props} />;
               },
               h2: ({ node, ...props }) => {
-                const id = props.children[0]?.toString().replace(/\s+/g, '-').toLowerCase();
+                const headingText = React.Children.toArray(props.children)
+                  .map((child) => (typeof child === 'string' || typeof child === 'number' ? child : ''))
+                  .join('');
+                const id = headingText.trim().replace(/\s+/g, '-').toLowerCase();
                 return <h2 id={id} {...props} />;
               },
               a: ({ node, href, children, ...props }) => {
