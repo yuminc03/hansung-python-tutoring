@@ -2,6 +2,17 @@
 
 2026학년도 1학기 미래플러스대학 재학생을 대상으로 진행하는 파이썬 프로그래밍 튜터링 아카이브 웹사이트입니다.
 
+### 🔗 배포 주소 (Live URL)
+👉 **[https://chuyumin.github.io/hansung-python-tutoring/](https://chuyumin.github.io/hansung-python-tutoring/)**
+
+---
+
+### 🖥️ 홈 화면 프리뷰 (Homepage Preview)
+
+![Homepage Preview](./public/screenshot.png)
+
+---
+
 ## 🚀 사이트 업데이트 및 배포 방법 (중요)
 
 이 프로젝트는 GitHub Pages를 통해 배포되고 있습니다. 새로운 튜터링 자료를 추가하거나 코드를 수정한 뒤, 실제 인터넷(웹사이트)에 반영하려면 **반드시 배포 명령어를 실행해야 합니다.**
