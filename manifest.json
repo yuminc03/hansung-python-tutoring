@@ -1,0 +1,20 @@
+{
+  "short_name": "파이썬 아카이브",
+  "name": "파이썬 튜터링 아카이브",
+  "icons": [
+    {
+      "src": "/favicon.svg?v=2",
+      "type": "image/svg+xml",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/favicon.svg?v=2",
+      "type": "image/svg+xml",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/hansung-python-tutoring/",
+  "background_color": "#FDFDF9",
+  "theme_color": "#D97706",
+  "display": "standalone"
+}
