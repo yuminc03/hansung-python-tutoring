@@ -68,6 +68,28 @@ const CodeBlock = ({ node, inline, className, children, ...props }) => {
   );
 };
 
+const getChildText = (child) => {
+  if (child == null) return '';
+  if (typeof child === 'string' || typeof child === 'number') {
+    return child.toString();
+  }
+  if (Array.isArray(child)) {
+    return child.map(getChildText).join('');
+  }
+  if (child.props && child.props.children) {
+    return getChildText(child.props.children);
+  }
+  return '';
+};
+
+const generateId = (text) => {
+  return text
+    .replace(/[`*_\\]/g, '') // Strip markdown formatting characters
+    .trim()
+    .replace(/\s+/g, '-')
+    .toLowerCase();
+};
+
 export default function Note() {
   const { week } = useParams();
   const currentWeekNum = parseInt(week, 10);
@@ -115,7 +137,7 @@ export default function Note() {
             <h3 className="sidebar-section-title">CONTENTS</h3>
             <ul className="sidebar-menu">
               {toc.map((heading, idx) => {
-                const targetId = heading.replace(/\s+/g, '-').toLowerCase();
+                const targetId = generateId(heading);
                 return (
                   <li key={idx} className="sidebar-menu-item">
                     <a
@@ -162,17 +184,13 @@ export default function Note() {
             components={{
               code: CodeBlock,
               h1: ({ node, ...props }) => {
-                const headingText = React.Children.toArray(props.children)
-                  .map((child) => (typeof child === 'string' || typeof child === 'number' ? child : ''))
-                  .join('');
-                const id = headingText.trim().replace(/\s+/g, '-').toLowerCase();
+                const headingText = getChildText(props.children);
+                const id = generateId(headingText);
                 return <h1 id={id} {...props} />;
               },
               h2: ({ node, ...props }) => {
-                const headingText = React.Children.toArray(props.children)
-                  .map((child) => (typeof child === 'string' || typeof child === 'number' ? child : ''))
-                  .join('');
-                const id = headingText.trim().replace(/\s+/g, '-').toLowerCase();
+                const headingText = getChildText(props.children);
+                const id = generateId(headingText);
                 return <h2 id={id} {...props} />;
               },
               a: ({ node, href, children, ...props }) => {
