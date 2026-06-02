@@ -3,7 +3,7 @@ import { useParams, Link } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
-import { ChevronLeft, Copy, Check } from 'lucide-react';
+import { ChevronLeft, Copy, Check, Menu, X } from 'lucide-react';
 import { WEEKS_DATA } from '../data/curriculum';
 import week1Md from '../data/notes/1_WEEK.md?raw';
 import week2Md from '../data/notes/2_WEEK.md?raw';
@@ -96,11 +96,13 @@ export default function Note() {
   const weekData = WEEKS_DATA.find((item) => item.week === currentWeekNum);
 
   const [toc, setToc] = useState([]);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   const markdownContent = mdFiles[currentWeekNum] || '# 콘텐츠가 아직 준비되지 않았습니다.\n추후 업데이트 예정입니다.';
 
   useEffect(() => {
     window.scrollTo(0, 0);
+    setIsSidebarOpen(false);
 
     if (mdFiles[currentWeekNum]) {
       const headings = [];
@@ -121,8 +123,29 @@ export default function Note() {
 
   return (
     <div className="note-layout">
-      <aside className="sidebar">
-        <Link to="/" className="back-link">
+      {/* Mobile Header */}
+      <div className="mobile-header">
+        <button className="menu-toggle-btn" onClick={() => setIsSidebarOpen(true)}>
+          <Menu size={20} />
+          <span>목차</span>
+        </button>
+        <Link to="/" className="mobile-home-link">
+          Home
+        </Link>
+      </div>
+
+      {/* Sidebar Backdrop */}
+      {isSidebarOpen && (
+        <div className="sidebar-backdrop" onClick={() => setIsSidebarOpen(false)} />
+      )}
+
+      <aside className={`sidebar ${isSidebarOpen ? 'open' : ''}`}>
+        {/* Sidebar Close Button */}
+        <button className="sidebar-close-btn" onClick={() => setIsSidebarOpen(false)}>
+          <X size={20} />
+        </button>
+
+        <Link to="/" className="back-link" onClick={() => setIsSidebarOpen(false)}>
           <ChevronLeft size={18} />
           Back to Home
         </Link>
@@ -144,6 +167,7 @@ export default function Note() {
                       href={`#${targetId}`}
                       onClick={(e) => {
                         e.preventDefault();
+                        setIsSidebarOpen(false); // Close sidebar on mobile
                         const element = document.getElementById(targetId);
                         if (element) {
                           element.scrollIntoView({ behavior: 'smooth' });
@@ -167,6 +191,7 @@ export default function Note() {
                 <Link
                   to={`/note/${item.week}`}
                   className={item.week === currentWeekNum ? 'active' : ''}
+                  onClick={() => setIsSidebarOpen(false)} // Close sidebar on mobile
                 >
                   Week {item.week}
                 </Link>
