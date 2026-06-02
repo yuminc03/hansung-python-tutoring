@@ -13,6 +13,7 @@ import week5Md from '../data/notes/5_WEEK.md?raw';
 import week6Md from '../data/notes/6_WEEK.md?raw';
 import remarkGfm from 'remark-gfm';
 import rehypeRaw from 'rehype-raw';
+import canolaPythonLogo from '../assets/canola_python.svg';
 import '../index.css';
 
 const mdFiles = {
@@ -153,7 +154,7 @@ export default function Note() {
         <div className="sidebar-header">
           <div className="sidebar-logo-container">
             <Link to="/">
-              <img src={`${import.meta.env.BASE_URL}favicon.svg`} alt="Canola Python Logo" className="sidebar-logo" />
+              <img src={canolaPythonLogo} alt="Canola Python Logo" className="sidebar-logo" />
             </Link>
           </div>
           <span className="sidebar-week-label">WEEK {weekData.week}</span>
