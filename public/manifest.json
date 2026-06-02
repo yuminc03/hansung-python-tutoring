@@ -3,13 +3,13 @@
   "name": "파이썬 튜터링 아카이브",
   "icons": [
     {
-      "src": "/favicon.svg?v=2",
-      "type": "image/svg+xml",
+      "src": "/favicon.png?v=2",
+      "type": "image",
       "sizes": "192x192"
     },
     {
-      "src": "/favicon.svg?v=2",
-      "type": "image/svg+xml",
+      "src": "/favicon.png?v=2",
+      "type": "image",
       "sizes": "512x512"
     }
   ],
