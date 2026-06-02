@@ -45,16 +45,23 @@
 - **작업 내용**: 수정한 모든 마스터 코드와 정적 에셋이 담긴 최종 파일을 배포 환경 규격에 맞춰 완벽하게 배포했습니다.
 - **명령어**: `npm run deploy` 실행을 통해 Vite 빌드 및 `.nojekyll` 생성을 일괄 처리하고 GitHub Pages 호스팅 도메인으로의 `gh-pages` 배포 퍼블리싱을 완료했습니다.
 
+### 7. 모바일 기기 홈 화면 추가 아이콘 대응 (iOS & Android)
+- **작업 내용**: 스마트폰(iOS 및 Android) 환경에서 웹사이트를 '홈 화면에 추가'할 때 바탕화면에 노출될 전용 마스코트 앱 아이콘을 설정했습니다.
+- **적용**: 
+  - iOS 사파리 대응을 위한 `apple-touch-icon` 메타태그와 파비콘 캐시 우회(?v=2) 연동 완료.
+  - 안드로이드 크롬 크로스 브라우징을 위한 고해상도 규격(`sizes="192x192"`, `sizes="512x512"`) 모바일 전용 아이콘 태그 추가 완료.
+
 ---
 
 ## 📂 작업 완료에 따른 파일 변경 내역
-- [x] [index.html](file:///Users/chuyumin/Documents/github/hansung-python-tutoring/index.html) (SEO & Open Graph 메타태그)
+- [x] [index.html](file:///Users/chuyumin/Documents/github/hansung-python-tutoring/index.html) (SEO, Open Graph 메타태그 및 모바일 앱 아이콘 연동)
 - [x] [src/pages/Home.jsx](file:///Users/chuyumin/Documents/github/hansung-python-tutoring/src/pages/Home.jsx) (로고 에셋 추가 및 히어로 구조 수정)
 - [x] [src/pages/Note.jsx](file:///Users/chuyumin/Documents/github/hansung-python-tutoring/src/pages/Note.jsx) (사이드바 로고 추가 및 링크 연동)
 - [x] [src/index.css](file:///Users/chuyumin/Documents/github/hansung-python-tutoring/src/index.css) (유채꽃 전용 팔레트, 카드 4면 테두리, 그림자, 사이드바 액티브 디자인 수정)
 - [x] [TODO.md](file:///Users/chuyumin/Documents/github/hansung-python-tutoring/TODO.md) (전체 할 일 목록 완료 체크 완료)
 - [x] [PLAN.md](file:///Users/chuyumin/Documents/github/hansung-python-tutoring/PLAN.md) (현재 상태 기재 갱신 및 향후 계획 완료 처리)
-- [x] [TODAY_WORK.md](file:///Users/chuyumin/Documents/github/hansung-python-tutoring/TODAY_WORK.md) (오늘 작업 이력 문서 생성 완료)
+- [x] [TODAY_WORK.md](file:///Users/chuyumin/Documents/github/hansung-python-tutoring/TODAY_WORK.md) (오늘 작업 리포트 및 모바일 앱 아이콘 내역 추가 완료)
+- [x] [PREVIOUS_HISTORY.md](file:///Users/chuyumin/Documents/github/hansung-python-tutoring/PREVIOUS_HISTORY.md) (오늘 진행된 프롬프트 기준 대화 이력 백업 완료)
 
 ---
 
