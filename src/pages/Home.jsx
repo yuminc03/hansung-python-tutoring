@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { WEEKS_DATA } from '../data/curriculum';
 import canolaPythonLogo from '../assets/canola_python.svg';
+import githubLogo from '../assets/github.svg';
 import '../index.css';
 
 export default function Home() {
@@ -30,6 +31,15 @@ export default function Home() {
           </div>
         ))}
       </main>
+
+      <footer className="footer">
+        <div className="footer-content">
+          <p className="footer-info">© 2026 Canola Python. All rights reserved. Created by chuyumin</p>
+          <a href="https://github.com/yuminc03/hansung-python-tutoring" target="_blank" rel="noopener noreferrer" className="footer-link" title="GitHub Repository">
+            <img src={githubLogo} alt="GitHub Logo" className="footer-github-icon" />
+          </a>
+        </div>
+      </footer>
     </div>
   );
 }
