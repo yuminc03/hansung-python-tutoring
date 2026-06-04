@@ -6,6 +6,9 @@
 - **[x] 최종 배포 및 검증 (Deploy)**
   - [x] 빌드 결과 검사 및 `npm run deploy` 실행을 통한 실서버 배포 완료
   - [x] 실서버에서 6주차 콘텐츠, 외부 링크 새 창 열기, 목차 스크롤, 모바일 반응형 및 브랜딩 최종 검증
+- **[x] 웹사이트 이름 변경 및 브랜딩 업데이트**
+  - [x] `index.html` 내 title, og:title, twitter:title을 "Canola Python"으로 일괄 변경 완료
+  - [x] `public/manifest.json` 내 Web App Manifest 이름을 "Canola Python"으로 동기화 완료
 
 ---
 
@@ -40,7 +43,7 @@
   - [x] Google Colab 및 외부 링크 새 창(`target="_blank"`)에서 열기 연동 (`rel="noopener noreferrer"` 적용으로 보안 및 성능 강화)
   - [x] 사이드바 목차(CONTENTS) 헤드라인 클릭 시 스크롤 오동작 해결 (HashRouter 오작동 방지 및 스무스 스크롤 연동 완료)
   - [x] 백틱(\`) 등 마크다운 기호가 포함된 목차 클릭 시 스크롤 오동작 해결 (마크다운 기호 제거 유틸 generateId 추가 및 일치화 완료)
-  - [x] 웹사이트 타이틀 및 메타태그(description 등) 수정 (브랜딩 & SEO 최적화 완료)
+  - [x] 웹사이트 타이틀 및 메타태그(description 등) 수정 및 이름을 "Canola Python"으로 변경 완료 (브랜딩 & SEO 최적화 완료)
   - [x] 파비콘(Favicon) 이미지 교체 및 HTML 연동 (브랜딩 완성)
   - [x] 모바일 홈 화면 추가 시 전용 아이콘 노출을 위한 apple-touch-icon 및 PWA manifest.json 설정 완료
   - [x] 웹사이트 전용 유채꽃 로고 에셋(canola_python.svg) 연동 완료 (Home 및 Sidebar 로고 경로 수정)
