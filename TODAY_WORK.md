@@ -1,7 +1,7 @@
 # 📅 오늘 작업 리포트 (Today's Work Report)
 
 **일시**: 2026년 6월 2일  
-**작업자**: Antigravity AI & chuyumin  
+**작업자**: Antigravity AI & Yumin Chu  
 **프로젝트**: 한성 AX 융합 Canola Python 웹사이트  
 
 ---
@@ -52,17 +52,25 @@
   - 안드로이드 크롬 크로스 브라우징을 위한 고해상도 규격(`sizes="192x192"`, `sizes="512x512"`) 모바일 전용 아이콘 태그 추가 완료.
   - 안드로이드 크롬의 즉각적인 모바일 홈 화면 추가 아이콘 갱신 및 캐시 강제 우회를 위한 PWA 규격의 **`manifest.json` (Web App Manifest)** 파일 생성 및 연동 완료.
 
+### 8. 홈 대시보드 하단 푸터(Footer) 연동
+- **작업 내용**: 웹사이트 하단에 저작권(Copyright) 및 제작자 정보, 그리고 GitHub 저장소로 즉시 이동 가능한 로고 링크를 추가했습니다.
+- **적용**: 
+  - 사용자가 업로드한 깃허브 로고 이미지 (`src/assets/github.svg`)를 20px * 20px 크기로 스타일링하여 배치 완료.
+  - 클릭 시 새 창에서 GitHub 저장소로 이동하며 안전성 확보를 위한 `rel="noopener noreferrer"` 연동 완료.
+  - 전체 웹 테마와 조화로운 미니멀한 회색 톤 텍스트 레이아웃 배치 완료.
+
 ---
 
 ## 📂 작업 완료에 따른 파일 변경 내역
 - [x] [index.html](file:///Users/chuyumin/Documents/github/hansung-python-tutoring/index.html) (SEO, Open Graph 메타태그 및 모바일 앱 아이콘 연동, "Canola Python"으로 사이트 타이틀 개편)
 - [x] [public/manifest.json](file:///Users/chuyumin/Documents/github/hansung-python-tutoring/public/manifest.json) (모바일 PWA 앱 명칭 "Canola Python" 동기화 및 아이콘 매핑 완료)
-- [x] [src/pages/Home.jsx](file:///Users/chuyumin/Documents/github/hansung-python-tutoring/src/pages/Home.jsx) (로고 에셋 추가, 히어로 구조 수정 및 메인 타이틀 명칭 Canola Python으로 변경)
+- [x] [src/pages/Home.jsx](file:///Users/chuyumin/Documents/github/hansung-python-tutoring/src/pages/Home.jsx) (로고 에셋 추가, 히어로 구조 수정, 메인 타이틀 명칭 Canola Python 변경 및 하단 푸터 영역 연동)
 - [x] [src/pages/Note.jsx](file:///Users/chuyumin/Documents/github/hansung-python-tutoring/src/pages/Note.jsx) (사이드바 로고 추가 및 링크 연동)
-- [x] [src/index.css](file:///Users/chuyumin/Documents/github/hansung-python-tutoring/src/index.css) (유채꽃 전용 팔레트, 카드 4면 테두리, 그림자, 사이드바 액티브 디자인 수정)
-- [x] [TODO.md](file:///Users/chuyumin/Documents/github/hansung-python-tutoring/TODO.md) (전체 할 일 목록 완료 체크 완료)
-- [x] [PLAN.md](file:///Users/chuyumin/Documents/github/hansung-python-tutoring/PLAN.md) (현재 상태 기재 갱신 및 향후 계획 완료 처리)
-- [x] [TODAY_WORK.md](file:///Users/chuyumin/Documents/github/hansung-python-tutoring/TODAY_WORK.md) (오늘 작업 리포트 및 웹사이트명 개편 내역 추가 완료)
+- [x] [src/index.css](file:///Users/chuyumin/Documents/github/hansung-python-tutoring/src/index.css) (유채꽃 전용 팔레트, 카드 4면 테두리, 그림자, 사이드바 액티브 디자인 수정 및 푸터 스타일 정의 완료)
+- [x] [src/assets/github.svg](file:///Users/chuyumin/Documents/github/hansung-python-tutoring/src/assets/github.svg) (푸터 GitHub 링크용 신규 로고 에셋 추가 완료)
+- [x] [TODO.md](file:///Users/chuyumin/Documents/github/hansung-python-tutoring/TODO.md) (전체 할 일 목록 완료 체크 완료 및 푸터 작업 기록 갱신)
+- [x] [PLAN.md](file:///Users/chuyumin/Documents/github/hansung-python-tutoring/PLAN.md) (현재 상태 기재 갱신 및 푸터 기획안 추가 완료)
+- [x] [TODAY_WORK.md](file:///Users/chuyumin/Documents/github/hansung-python-tutoring/TODAY_WORK.md) (오늘 작업 리포트 및 웹사이트명 개편/푸터 연동 내역 추가 완료)
 - [x] [PREVIOUS_HISTORY.md](file:///Users/chuyumin/Documents/github/hansung-python-tutoring/PREVIOUS_HISTORY.md) (진행된 프롬프트 기준 대화 이력 최종 백업 완료)
 
 ---

@@ -831,3 +831,49 @@ src/pages/Home.jsx 에서 card를 hover하기 전에 갈색 띠가 상단만 보
 `Home.jsx`의 메인 히어로 타이틀 헤더도 일치하게 **"Canola Python"**으로 변경을 완료하고, 관련된 모든 마크다운 문서들(`TODO.md`, `PLAN.md`, `TODAY_WORK.md`, `PREVIOUS_HISTORY.md`)을 이에 맞춰 세심하게 업데이트하였습니다.
 
 ---
+
+## 👤 User
+
+이제 웹사이트 @[src/pages/Home.jsx] 에 footer를 추가하고 그 footer에는 이 웹사이트의 저작권 표시나 제작자 표시 github 링크를 걸거야. github 이미지도 여기 준비했어. footer 작업에 대한 계획을 @[PLAN.md] 에 작성해주고 해야할 일에 대한 내용은 @[TODO.md] 에 업데이트해줘.
+
+---
+
+## 🤖 Agent
+
+홈 대시보드 하단에 기획 및 저작권 정보, 제작자 표시, GitHub 이동 링크를 포함한 **푸터(Footer)** 공통 컴포넌트를 연동하였습니다.
+
+- **`Home.jsx`**: 하단에 footer 마크업 구조를 생성하고, 사용자가 업로드한 깃허브 로고 이미지 (`src/assets/github.svg`)와 프로젝트 저장소 링크를 연동했습니다.
+- **`index.css`**: 가독성이 높은 미니멀 그레이 톤 텍스트 및 로고 배치, 그리고 반응형 모바일 미디어 쿼리 스타일 규칙을 덧붙였습니다.
+- **`PLAN.md` / `TODO.md` / `TODAY_WORK.md`**: 푸터에 관한 디자인 계획, 할 일 상태 전환(`[x]`), 완료 보고서 기록을 상세히 반영하고 문서 정합성을 맞추었습니다.
+
+---
+
+## 👤 User
+
+github.png 이미지를 @[src/assets/github.svg] 로 수정했어. 문서에 반영해줘.
+
+---
+
+## 🤖 Agent
+
+푸터에 표시되는 GitHub 아이콘 이미지의 형식을 PNG에서 SVG로 변경함에 따라 관련 문서와 연동 소스 코드의 확장자 표기를 `github.png`에서 `github.svg`로 전면 갱신하였습니다.
+
+- **`Home.jsx`**: 임포트 파일 경로를 `github.svg`로 업데이트했습니다.
+- **`PLAN.md` / `TODO.md` / `TODAY_WORK.md` / `PREVIOUS_HISTORY.md`**: 에셋 경로 및 완료 이력 표기를 모두 SVG로 최종 동기화 완료했습니다.
+
+---
+
+## 👤 User
+
+footer에 내 이름을 chuyumin이 아닌 Yumin Chu로 바꾸자!
+
+---
+
+## 🤖 Agent
+
+웹사이트의 푸터 저작권 영역에 표시되던 영문 이름을 `chuyumin`에서 **`Yumin Chu`**로 변경하였습니다.
+
+- **`Home.jsx`**: 푸터 렌더링 텍스트 내 저작자 이름을 `Yumin Chu`로 변경했습니다.
+- **`PLAN.md` / `TODAY_WORK.md` / `PREVIOUS_HISTORY.md`**: 관련 기획 문서 및 작업 완료 보고서상의 제작자/작업자 명칭을 모두 `Yumin Chu`로 동기화 완료했습니다.
+
+---

@@ -10,6 +10,10 @@
   - [x] `index.html` 내 title, og:title, twitter:title을 "Canola Python"으로 일괄 변경 완료
   - [x] `public/manifest.json` 내 Web App Manifest 이름을 "Canola Python"으로 동기화 완료
   - [x] `src/pages/Home.jsx` 내 메인 히어로 타이틀을 "Canola Python"으로 변경 완료
+- **[x] 홈 대시보드 푸터(Footer) 추가**
+  - [x] `src/pages/Home.jsx` 하단에 footer 영역 생성 완료
+  - [x] 저작권 표시, 제작자 표시, GitHub 저장소 바로가기 링크 및 아이콘(`src/assets/github.svg`) 연동 완료
+  - [x] `src/index.css`에 푸터 전용 미니멀 스타일 정의 (여백, 텍스트 색상, 모바일 반응형) 완료
 
 ---
 
@@ -52,6 +56,8 @@
   - [x] Notion 북마크 노출 최적화를 위한 Open Graph 메타태그 적용 및 유채꽃 대표 이미지 연동 완료
 - **최종 배포 (Deploy)**
   - [x] `gh-pages`와 `.nojekyll` 설정을 통한 GitHub Pages 자동 배포 스크립트 구축 및 실제 배포 완료
+- **홈 대시보드 푸터 (Footer)**
+  - [x] 저작권, 제작자 정보 표시 및 GitHub 로고 아이콘(`src/assets/github.svg`)을 포함한 푸터 연동 완료
 
 ---
 
