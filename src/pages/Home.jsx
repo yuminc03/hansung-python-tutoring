@@ -34,7 +34,7 @@ export default function Home() {
 
       <footer className="footer">
         <div className="footer-content">
-          <p className="footer-info">© 2026 Canola Python. All rights reserved. Created by chuyumin</p>
+          <p className="footer-info">© 2026 Canola Python. All rights reserved. Created by Yumin Chu</p>
           <a href="https://github.com/yuminc03/hansung-python-tutoring" target="_blank" rel="noopener noreferrer" className="footer-link" title="GitHub Repository">
             <img src={githubLogo} alt="GitHub Logo" className="footer-github-icon" />
           </a>
