@@ -9,6 +9,7 @@
 - **[x] 웹사이트 이름 변경 및 브랜딩 업데이트**
   - [x] `index.html` 내 title, og:title, twitter:title을 "Canola Python"으로 일괄 변경 완료
   - [x] `public/manifest.json` 내 Web App Manifest 이름을 "Canola Python"으로 동기화 완료
+  - [x] `src/pages/Home.jsx` 내 메인 히어로 타이틀을 "Canola Python"으로 변경 완료
 
 ---
 

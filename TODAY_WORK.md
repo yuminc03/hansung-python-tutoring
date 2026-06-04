@@ -2,7 +2,7 @@
 
 **일시**: 2026년 6월 2일  
 **작업자**: Antigravity AI & chuyumin  
-**프로젝트**: 한성 AX 융합 파이썬 튜터링 아카이브 웹사이트  
+**프로젝트**: 한성 AX 융합 Canola Python 웹사이트  
 
 ---
 
@@ -14,9 +14,9 @@
 
 ## 🛠️ 상세 작업 이력 (Details)
 
-### 1. 웹사이트 타이틀 및 메타태그 수정 (브랜딩 & SEO)
-- **작업 내용**: 브라우저 탭에 노출되는 지나치게 긴 제목을 직관적이고 심플하게 수정하여 브랜딩을 강화했습니다.
-- **적용**: `<title>파이썬 튜터링 아카이브</title>`로 단축 및 웹페이지 설명 검색 최적화를 위한 `meta description` 추가 완료.
+### 1. 웹사이트 타이틀 및 메타태그 수정 (브랜딩 & SEO - Canola Python)
+- **작업 내용**: 브라우저 탭에 노출되는 제목 및 SNS 공유 메타태그, 그리고 홈 화면 타이틀을 더욱 감각적인 새로운 웹사이트 명칭인 **"Canola Python"**으로 전면 개편했습니다.
+- **적용**: `<title>Canola Python</title>` 및 Open Graph, Twitter Card, Web App Manifest(`manifest.json`), 그리고 `Home.jsx` 메인 히어로 타이틀 설정을 동기화 완료.
 
 ### 2. 파비콘(Favicon) 이미지 교체 및 연동
 - **작업 내용**: 웹사이트의 공식 아이덴티티를 나타내는 고유 아이콘인 파비콘을 새롭게 교체 및 렌더링하도록 `index.html`을 업데이트했습니다.
@@ -55,15 +55,16 @@
 ---
 
 ## 📂 작업 완료에 따른 파일 변경 내역
-- [x] [index.html](file:///Users/chuyumin/Documents/github/hansung-python-tutoring/index.html) (SEO, Open Graph 메타태그 및 모바일 앱 아이콘 연동)
-- [x] [src/pages/Home.jsx](file:///Users/chuyumin/Documents/github/hansung-python-tutoring/src/pages/Home.jsx) (로고 에셋 추가 및 히어로 구조 수정)
+- [x] [index.html](file:///Users/chuyumin/Documents/github/hansung-python-tutoring/index.html) (SEO, Open Graph 메타태그 및 모바일 앱 아이콘 연동, "Canola Python"으로 사이트 타이틀 개편)
+- [x] [public/manifest.json](file:///Users/chuyumin/Documents/github/hansung-python-tutoring/public/manifest.json) (모바일 PWA 앱 명칭 "Canola Python" 동기화 및 아이콘 매핑 완료)
+- [x] [src/pages/Home.jsx](file:///Users/chuyumin/Documents/github/hansung-python-tutoring/src/pages/Home.jsx) (로고 에셋 추가, 히어로 구조 수정 및 메인 타이틀 명칭 Canola Python으로 변경)
 - [x] [src/pages/Note.jsx](file:///Users/chuyumin/Documents/github/hansung-python-tutoring/src/pages/Note.jsx) (사이드바 로고 추가 및 링크 연동)
 - [x] [src/index.css](file:///Users/chuyumin/Documents/github/hansung-python-tutoring/src/index.css) (유채꽃 전용 팔레트, 카드 4면 테두리, 그림자, 사이드바 액티브 디자인 수정)
 - [x] [TODO.md](file:///Users/chuyumin/Documents/github/hansung-python-tutoring/TODO.md) (전체 할 일 목록 완료 체크 완료)
 - [x] [PLAN.md](file:///Users/chuyumin/Documents/github/hansung-python-tutoring/PLAN.md) (현재 상태 기재 갱신 및 향후 계획 완료 처리)
-- [x] [TODAY_WORK.md](file:///Users/chuyumin/Documents/github/hansung-python-tutoring/TODAY_WORK.md) (오늘 작업 리포트 및 모바일 앱 아이콘 내역 추가 완료)
-- [x] [PREVIOUS_HISTORY.md](file:///Users/chuyumin/Documents/github/hansung-python-tutoring/PREVIOUS_HISTORY.md) (오늘 진행된 프롬프트 기준 대화 이력 백업 완료)
+- [x] [TODAY_WORK.md](file:///Users/chuyumin/Documents/github/hansung-python-tutoring/TODAY_WORK.md) (오늘 작업 리포트 및 웹사이트명 개편 내역 추가 완료)
+- [x] [PREVIOUS_HISTORY.md](file:///Users/chuyumin/Documents/github/hansung-python-tutoring/PREVIOUS_HISTORY.md) (진행된 프롬프트 기준 대화 이력 최종 백업 완료)
 
 ---
 
-🎉 **축하합니다! 이로써 한성 AX 융합 파이썬 튜터링 아카이브의 모든 마스터 빌드 및 기획서 목표가 100% 완료되었습니다!**
+🎉 **축하합니다! 이로써 한성 AX 융합 Canola Python의 모든 마스터 빌드 및 기획서 목표가 100% 완료되었습니다!**

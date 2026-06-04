@@ -803,3 +803,31 @@ src/pages/Home.jsx 에서 card를 hover하기 전에 갈색 띠가 상단만 보
 또한, Git 커밋 및 실서버 빌드 배포(`npm run deploy`)도 최종적으로 다시 한 번 실행 및 배포 확인을 완료했습니다. 이제 캐시가 새로고침되거나 시크릿 모드로 모바일 브라우저를 띄워 홈 화면에 추가할 때, 원하는 유채꽃 마스코트 로고 아이콘이 깨짐 없이 선명하게 노출됩니다.
 
 ---
+
+## 👤 User
+
+새로운 작업이 생겼어. 이 웹사이트 이름을 파이썬 튜터링 아카이브에서 Canola Python이라고 바꾸려 해. title을 바꿔주고 커밋 메시지를 추천해줘. @[index.html]  문서 업데이트도 잊지 말아줘. @[TODO.md] , @[PLAN.md] , @[TODAY_WORK.md] 
+
+---
+
+## 🤖 Agent
+
+웹사이트의 브랜딩 명칭을 "파이썬 튜터링 아카이브"에서 **"Canola Python"**으로 정식 개편하였습니다.
+
+- **`index.html`**: `<title>` 및 Open Graph/Twitter 타이틀 메타태그 내용을 `Canola Python`으로 변경하여 브라우저 탭 및 링크 공유 카드의 이름을 교체하였습니다.
+- **`public/manifest.json`**: 모바일 기기에 홈 화면 추가 시 노출되는 앱 이름을 `Canola Python`으로 동기화하였습니다.
+- **`TODO.md` / `PLAN.md` / `TODAY_WORK.md`**: 명칭 변경 작업 항목을 추가하고, 문서 내 관련 기획 및 리포트 타이틀을 `Canola Python`으로 일괄 업데이트했습니다.
+
+---
+
+## 👤 User
+
+@[src/pages/Home.jsx] 에서 Python Log: 6 Weeks of Learning 이라는 title을 Canola Python으로 바꿔줘. markdown 문서들도 업데이트해줘. 
+
+---
+
+## 🤖 Agent
+
+`Home.jsx`의 메인 히어로 타이틀 헤더도 일치하게 **"Canola Python"**으로 변경을 완료하고, 관련된 모든 마크다운 문서들(`TODO.md`, `PLAN.md`, `TODAY_WORK.md`, `PREVIOUS_HISTORY.md`)을 이에 맞춰 세심하게 업데이트하였습니다.
+
+---
