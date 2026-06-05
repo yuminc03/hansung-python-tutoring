@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import { WEEKS_DATA } from '../data/curriculum';
 import canolaPythonLogo from '../assets/canola_python.svg';
 import githubLogo from '../assets/github.svg';
+import creatorDevImg from '../assets/creator_dev.png';
+import creatorPythonImg from '../assets/creator_python.png';
 import '../index.css';
 
 export default function Home() {
@@ -31,6 +33,23 @@ export default function Home() {
           </div>
         ))}
       </main>
+
+      <section className="creator-section">
+        <div className="creator-card">
+          <div className="creator-avatars">
+            <img src={creatorDevImg} alt="Developer Yumin Chu" className="creator-avatar" />
+            <img src={creatorPythonImg} alt="Python Mascot" className="creator-avatar" />
+          </div>
+          <div className="creator-info">
+            <span className="creator-title-label">ABOUT THE CREATOR</span>
+            <h2 className="creator-name">Yumin Chu</h2>
+            <p className="creator-description">
+              미래플러스대학 튜티들과 함께 성장하기 위해 6주간의 파이썬 여정을 기록하는 튜터입니다.<br />
+              유채꽃 가득한 봄날처럼, 쉽고 재미있게 파이썬 프로그래밍을 학습할 수 있도록 돕습니다.
+            </p>
+          </div>
+        </div>
+      </section>
 
       <footer className="footer">
         <div className="footer-content">
