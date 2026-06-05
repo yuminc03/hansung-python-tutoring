@@ -3,7 +3,7 @@ import { useParams, Link } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
-import { ChevronLeft, Copy, Check, Menu, X } from 'lucide-react';
+import { ChevronLeft, Copy, Check, Menu, X, Sun, Moon } from 'lucide-react';
 import { WEEKS_DATA } from '../data/curriculum';
 import week1Md from '../data/notes/1_WEEK.md?raw';
 import week2Md from '../data/notes/2_WEEK.md?raw';
@@ -91,7 +91,7 @@ const generateId = (text) => {
     .toLowerCase();
 };
 
-export default function Note() {
+export default function Note({ theme, toggleTheme }) {
   const { week } = useParams();
   const currentWeekNum = parseInt(week, 10);
   const weekData = WEEKS_DATA.find((item) => item.week === currentWeekNum);
@@ -130,6 +130,9 @@ export default function Note() {
           <Menu size={20} />
           <span>목차</span>
         </button>
+        <button className="theme-toggle-btn" onClick={toggleTheme} aria-label="Toggle Theme" style={{ padding: '8px' }}>
+          {theme === 'light' ? <Moon size={18} /> : <Sun size={18} />}
+        </button>
         <Link to="/" className="mobile-home-link">
           Home
         </Link>
@@ -146,10 +149,15 @@ export default function Note() {
           <X size={20} />
         </button>
 
-        <Link to="/" className="back-link" onClick={() => setIsSidebarOpen(false)}>
-          <ChevronLeft size={18} />
-          Back to Home
-        </Link>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '40px' }}>
+          <Link to="/" className="back-link" onClick={() => setIsSidebarOpen(false)} style={{ marginBottom: 0 }}>
+            <ChevronLeft size={18} />
+            Back to Home
+          </Link>
+          <button className="theme-toggle-btn" onClick={toggleTheme} aria-label="Toggle Theme">
+            {theme === 'light' ? <Moon size={16} /> : <Sun size={16} />}
+          </button>
+        </div>
 
         <div className="sidebar-header">
           <div className="sidebar-logo-container">
