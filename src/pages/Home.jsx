@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 import { WEEKS_DATA } from '../data/curriculum';
 import canolaPythonLogo from '../assets/canola_python.svg';
 import githubLogo from '../assets/github.svg';
-import creatorDevImg from '../assets/creator_dev.png';
-import creatorPythonImg from '../assets/creator_python.png';
+import tuteeImg from '../assets/tutee.png';
+import tutorImg from '../assets/tutor.png';
 import '../index.css';
 
 export default function Home() {
@@ -37,8 +37,8 @@ export default function Home() {
       <section className="creator-section">
         <div className="creator-card">
           <div className="creator-avatars">
-            <img src={creatorDevImg} alt="Tutor Yumin Chu" className="creator-avatar" />
-            <img src={creatorPythonImg} alt="Tutee" className="creator-avatar" />
+            <img src={tuteeImg} alt="Tutee" className="creator-avatar" />
+            <img src={tutorImg} alt="Tutor Yumin Chu" className="creator-avatar" />
           </div>
           <div className="creator-info">
             <span className="creator-title-label">ABOUT THE CREATOR</span>
