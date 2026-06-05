@@ -38,13 +38,13 @@ export default function Home() {
         <div className="creator-card">
           <div className="creator-avatars">
             <img src={tuteeImg} alt="Tutee" className="creator-avatar" />
-            <img src={tutorImg} alt="Tutor Yumin Chu" className="creator-avatar" />
+            <img src={tutorImg} alt="Tutor Lia" className="creator-avatar" />
           </div>
           <div className="creator-info">
             <span className="creator-title-label">ABOUT THE CREATOR</span>
-            <h2 className="creator-name">Yumin Chu</h2>
+            <h2 className="creator-name">Lia</h2>
             <p className="creator-description">
-              6주간의 파이썬 여정을 기록하는 튜터, AI.소프트웨어학과 25학번 추유민입니다.<br />
+              6주간의 파이썬 여정을 기록하는 튜터, AI.소프트웨어학과 25학번 리아입니다.<br />
               유채꽃 가득한 봄날처럼, 쉽고 재미있게 파이썬 프로그래밍을 학습할 수 있도록 돕습니다.
             </p>
           </div>
@@ -53,7 +53,7 @@ export default function Home() {
 
       <footer className="footer">
         <div className="footer-content">
-          <p className="footer-info">© 2026 Canola Python. All rights reserved. Created by Yumin Chu</p>
+          <p className="footer-info">© 2026 Canola Python. All rights reserved. Created by Lia</p>
           <a href="https://github.com/yuminc03/hansung-python-tutoring" target="_blank" rel="noopener noreferrer" className="footer-link" title="GitHub Repository">
             <img src={githubLogo} alt="GitHub Logo" className="footer-github-icon" />
           </a>
