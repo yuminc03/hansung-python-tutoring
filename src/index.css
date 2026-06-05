@@ -759,7 +759,9 @@ a:hover {
 }
 
 /* Inline Code Styles */
-.note-content-inner :not(pre) > code {
+.note-content-inner p > code,
+.note-content-inner li > code,
+.note-content-inner td > code {
   background-color: var(--bg-th);
   color: var(--point-dark);
   padding: 3px 6px;
@@ -768,6 +770,14 @@ a:hover {
   font-size: 0.9em;
   font-weight: 500;
   transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Reset react-syntax-highlighter nested code styles */
+.code-block-wrapper code {
+  background-color: transparent !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+  font-size: inherit !important;
 }
 
 /* blockquote 인용구 스타일링 */
