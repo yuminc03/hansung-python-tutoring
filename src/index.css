@@ -559,6 +559,90 @@ a:hover {
   .card-summary {
     margin-bottom: 20px;
   }
+
+  .creator-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 32px 24px;
+    gap: 24px;
+  }
+
+  .creator-avatars {
+    justify-content: center;
+  }
+
+  .creator-avatar {
+    width: 80px;
+    height: 80px;
+  }
+
+  .creator-description {
+    font-size: 0.9rem;
+    word-break: keep-all;
+  }
+}
+
+/* ==========================================================================
+   Creator Section Styling
+   ========================================================================== */
+.creator-section {
+  margin-top: 80px;
+}
+
+.creator-card {
+  background-color: var(--bg-card);
+  border-radius: var(--radius-xl);
+  padding: 40px;
+  box-shadow: var(--shadow-card);
+  border: 2px solid rgba(217, 119, 6, 0.15);
+  display: flex;
+  gap: 36px;
+  align-items: center;
+}
+
+.creator-avatars {
+  display: flex;
+  gap: 16px;
+}
+
+.creator-avatar {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid rgba(217, 119, 6, 0.15);
+  box-shadow: 0 4px 15px rgba(217, 119, 6, 0.05);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.creator-avatar:hover {
+  transform: scale(1.06);
+}
+
+.creator-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.creator-title-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-tertiary);
+  letter-spacing: 0.08em;
+}
+
+.creator-name {
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
+}
+
+.creator-description {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
 }
 
 /* ==========================================================================
