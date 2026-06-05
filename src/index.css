@@ -450,6 +450,10 @@ a:hover {
     justify-self: end;
   }
 
+  .sidebar-theme-btn {
+    display: none !important;
+  }
+
   /* Slide-in Overlay Sidebar on Mobile */
   .sidebar {
     position: fixed;

@@ -154,7 +154,7 @@ export default function Note({ theme, toggleTheme }) {
             <ChevronLeft size={18} />
             Back to Home
           </Link>
-          <button className="theme-toggle-btn" onClick={toggleTheme} aria-label="Toggle Theme">
+          <button className="theme-toggle-btn sidebar-theme-btn" onClick={toggleTheme} aria-label="Toggle Theme">
             {theme === 'light' ? <Moon size={16} /> : <Sun size={16} />}
           </button>
         </div>
