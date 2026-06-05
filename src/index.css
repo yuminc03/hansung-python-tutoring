@@ -37,6 +37,7 @@ body {
   background-color: var(--bg-main);
   color: var(--text-primary);
   -webkit-font-smoothing: antialiased;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 * {
@@ -163,6 +164,7 @@ a:hover {
   display: flex;
   min-height: 100vh;
   background-color: var(--bg-main);
+  transition: background-color 0.3s ease;
 }
 
 .sidebar {
@@ -177,6 +179,7 @@ a:hover {
   overflow-y: auto;
   display: flex;
   flex-direction: column;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
 .back-link {
@@ -614,6 +617,7 @@ a:hover {
   display: flex;
   gap: 36px;
   align-items: center;
+  transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .creator-avatars {
@@ -752,4 +756,31 @@ a:hover {
   .home-header-row {
     align-items: center;
   }
+}
+
+/* Inline Code Styles */
+.note-content-inner :not(pre) > code {
+  background-color: var(--bg-th);
+  color: var(--point-dark);
+  padding: 3px 6px;
+  border-radius: 6px;
+  font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace;
+  font-size: 0.9em;
+  font-weight: 500;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* blockquote 인용구 스타일링 */
+.note-content-inner blockquote {
+  margin: 24px 0;
+  padding: 16px 24px;
+  background-color: var(--bg-th);
+  border-left: 4px solid var(--point-color);
+  border-radius: 4px;
+  color: var(--text-secondary);
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+
+.note-content-inner blockquote p {
+  margin-bottom: 0;
 }
