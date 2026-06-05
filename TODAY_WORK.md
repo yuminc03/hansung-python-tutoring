@@ -72,14 +72,26 @@
   - `creator_python.png` (튜티 원본) -> `tutee.png`
   - `Home.jsx` 소스 내 파일 임포트 경로 및 변수명(`tuteeImg`, `tutorImg`) 변경 적용 완료.
 
+### 11. 다크 모드(Dark Mode) 지원 및 테마 토글 스위치 구현
+- **작업 내용**: 사용자가 시스템 설정 혹은 선호도에 따라 웹사이트의 테마를 변경할 수 있도록 전역 다크 모드 기능을 기획 및 구현했습니다.
+- **적용**: 
+  - `App.jsx`에서 `theme` 상태(`light` | `dark`)를 전역적으로 관리하고, 사용자가 선택한 테마를 `localStorage`에 캐싱하여 재방문 시 기본 테마로 설정되도록 연동했습니다. (설정값 없을 시 시스템 테마 우선 감지 fallback 포함)
+  - HTML 최상위 노드에 `data-theme` 속성을 동적으로 주입하여 `index.css` 내 다크 모드 전용 전역 변수들(배경, 카드, 텍스트, 경계선, 황금빛 호버 반사광 등)로 테마가 부드럽게 반전되도록 스타일 시트를 구축했습니다.
+  - 홈 대시보드(`Home.jsx`)와 학습 노트 상세 화면(`Note.jsx` - 사이드바 및 모바일 헤더)에 테마 토글 스위치(Sun/Moon 아이콘)를 이중 설계하여 직관적인 전환 환경을 구성했습니다.
+  - 마크다운 콘텐츠 렌더링 영역 내 인라인 코드 및 인용구(`blockquote`)에 다크 모드 대비를 고려한 세련된 전용 색상을 피팅하였고, 테마 변경 시 모든 컴포넌트가 부드럽게 변경되도록 CSS 트랜지션을 전역 보완했습니다.
+  - 모바일 환경에서 사이드바 오픈 시 우측 상단의 닫기(X) 버튼과 테마 토글 버튼이 겹치던 레이아웃 충돌 문제를 완벽하게 인지하여, 모바일 뷰일 경우 사이드바 내의 스위치를 숨김 처리(`.sidebar-theme-btn { display: none !important; }`)하고 상단 고정 헤더 영역의 스위치로 단일 통합 제어되도록 레이아웃 정교화를 마쳤습니다.
+  - 모바일 네비게이션 상단 바(`.mobile-header`)의 텍스트 너비 편차로 인해 테마 스위치가 정중앙에서 한쪽으로 치우쳐 쏠리던 문제를 개선하기 위해 기존 `flex` 레이아웃을 `grid-template-columns: 1fr auto 1fr` 3열 구조로 변경하여 절대 수평 기준 50% 지점에 정확히 스위치가 위치하도록 완성했습니다.
+
+
 ---
 
 ## 📂 작업 완료에 따른 파일 변경 내역
 - [x] [index.html](file:///Users/chuyumin/Documents/github/hansung-python-tutoring/index.html) (SEO, Open Graph 메타태그 및 모바일 앱 아이콘 연동, "Canola Python"으로 사이트 타이틀 개편)
 - [x] [public/manifest.json](file:///Users/chuyumin/Documents/github/hansung-python-tutoring/public/manifest.json) (모바일 PWA 앱 명칭 "Canola Python" 동기화 및 아이콘 매핑 완료)
-- [x] [src/pages/Home.jsx](file:///Users/chuyumin/Documents/github/hansung-python-tutoring/src/pages/Home.jsx) (로고 및 제작자 캐릭터 에셋 추가, 히어로 구조 수정, 메인 타이틀 명칭 Canola Python 변경, 하단 푸터 및 제작자 소개 영역 연동 완료)
-- [x] [src/pages/Note.jsx](file:///Users/chuyumin/Documents/github/hansung-python-tutoring/src/pages/Note.jsx) (사이드바 로고 추가 및 링크 연동)
-- [x] [src/index.css](file:///Users/chuyumin/Documents/github/hansung-python-tutoring/src/index.css) (유채꽃 전용 팔레트, 카드 4면 테두리, 그림자, 사이드바 액티브 디자인 수정 및 푸터/제작자 소개 스타일 정의 완료)
+- [x] [src/App.jsx](file:///Users/chuyumin/Documents/github/hansung-python-tutoring/src/App.jsx) (전역 다크 모드 상태 관리 설계, localStorage 캐싱 연동 및 토글 상태 전송 라우팅 추가)
+- [x] [src/pages/Home.jsx](file:///Users/chuyumin/Documents/github/hansung-python-tutoring/src/pages/Home.jsx) (로고 및 제작자 캐릭터 에셋 추가, 히어로 구조 수정, 메인 타이틀 명칭 Canola Python 변경, 하단 푸터 및 제작자 소개 영역 연동 완료, 헤더 우측 상단 다크 모드 토글 스위치 버튼 추가)
+- [x] [src/pages/Note.jsx](file:///Users/chuyumin/Documents/github/hansung-python-tutoring/src/pages/Note.jsx) (사이드바 로고 추가 및 링크 연동, 사이드바 상단 및 모바일 탑 네비게이션 헤더에 다크 모드 토글 스위치 버튼 이중 추가)
+- [x] [src/index.css](file:///Users/chuyumin/Documents/github/hansung-python-tutoring/src/index.css) (유채꽃 전용 팔레트, 카드 4면 테두리, 그림자, 사이드바 액티브 디자인 수정 및 푸터/제작자 소개 스타일 정의 완료, 다크 모드 CSS 변수 및 추가 필터 정의, 인라인 코드/인용구 다크 모드 스타일링 보완, 구문강조 코드블록 텍스트 배경 겹침 현상 해결, 모바일 탑 헤더 정중앙 정렬 보완 및 전역 300ms 테마 트랜지션 추가)
 - [x] [src/assets/github.svg](file:///Users/chuyumin/Documents/github/hansung-python-tutoring/src/assets/github.svg) (푸터 GitHub 링크용 신규 로고 에셋 추가 완료)
 - [x] [src/assets/tutee.png](file:///Users/chuyumin/Documents/github/hansung-python-tutoring/src/assets/tutee.png) (제작자 소개용 튜티 캐릭터 이미지 파일명 변경 완료)
 - [x] [src/assets/tutor.png](file:///Users/chuyumin/Documents/github/hansung-python-tutoring/src/assets/tutor.png) (제작자 소개용 튜터 캐릭터 이미지 파일명 변경 완료)

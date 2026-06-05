@@ -959,5 +959,69 @@ Yumin Chu나 추유민이라고 적힌 내 본명을 리아 라는 닉네임으�
 - **`Home.jsx`**: 저작권 정보, 제작자 이름 및 소개 영역의 실명을 `Lia` 및 `리아`로 변경했습니다.
 - **`PLAN.md` / `TODO.md` / `TODAY_WORK.md` / `PREVIOUS_HISTORY.md`**: 문서 내에 표기된 작업자 및 설명 문구 상의 실명을 모두 `Lia`/`리아`로 동기화 완료했습니다.
 
+---
+
+## 👤 User
+
+이제 마지막 작업으로 light mode와 dark mode를 바꿀 수 있는 스위치를 추가하고 현재 라이트 모드 기준으로 다크 모드로 바꿀 수 있는 기능을 추가할거야. 이것만 추가하고 일단 작업을 마무리하려고 해. markdown문서들 업데이트해서 작업 계획은 세우고 작업 시작해줘. @[TODO.md] , @[PLAN.md] 대신, 작업은 기능 한 개씩 하고 커밋 메시지 추천해주면서 시작해줘.
+
+---
+
+## 🤖 Agent
+
+전역 라이트/다크 모드 상태 관리 구축, `index.css` 다크 모드 전용 변수 선언, `Home.jsx` 및 `Note.jsx` 토글 스위치 컴포넌트 장착, 그리고 인라인 코드/인용구 스타일링 최적화 및 페이드인 트랜지션을 순차적으로 적용하여 완성도 높은 다크 모드 시스템 개발을 모두 완료하였습니다.
+- **`App.jsx`**: `theme` 상태 및 `localStorage` 동기화, HTML 최상위 data-theme 설정 제어 로직 반영
+- **`index.css`**: 다크 옐로우/브라운 팔레트 CSS 전역 변수 정의, 인라인 코드(code) 및 인용구(blockquote) 가독성 오버라이드, 부드러운 테마 전환 트랜지션 추가
+- **`Home.jsx` / `Note.jsx`**: Sun/Moon 테마 토글 스위치 버튼 헤더 및 사이드바에 이중 연동
+- **`PLAN.md` / `TODO.md` / `TODAY_WORK.md`**: 다크 모드 기능 계획 수립, 할 일 목록 체크 완료([x]) 처리 및 최종 리포트 보강 완료
+
+---
+
+## 👤 User
+
+라이트 모드에서 @[src/pages/Note.jsx] 의 코드블록이 바탕은 검은데 글자부분만 하얘서 무언가 어색한 디자인이 되었어. 수정해줄래?
+
+---
+
+## 🤖 Agent
+
+`SyntaxHighlighter` 컴포넌트가 `PreTag="div"`를 사용하여 생성된 내부 `code` 태그가 전역 마크다운 인라인 코드 선택자(`.note-content-inner :not(pre) > code`)에 불필요하게 매칭되어 라이트 모드 배경 띠가 겹쳐 보이던 문제를 해결했습니다.
+- **`index.css`**:
+  - 인라인 코드 스타일 적용 영역을 문맥적 부모 요소(`.note-content-inner p > code, .note-content-inner li > code, .note-content-inner td > code`)로 제한하여 코드블록 내부 요소에 스타일이 적용되지 않도록 격리했습니다.
+  - `.code-block-wrapper code`에 대해 `background-color: transparent !important` 스타일을 부여하여 SyntaxHighlighter 내부 스타일 오버라이드를 안전하게 무력화하였습니다.
+
+---
+
+## 👤 User
+
+한 가지 더 하면 웹페이지 모바일 모드에서 다크모드 토글이 화면 가운데에 안 온 것 같아. 상단 토글을 가운데로 옮겨줄래?
+
+---
+
+## 🤖 Agent
+
+모바일 네비게이션 상단 바(`.mobile-header`)의 텍스트 너비 편차에 따른 비대칭 중앙 정렬 문제를 해결했습니다.
+- **`index.css`**:
+  - `.mobile-header`를 `flex` 레이아웃에서 `grid` 레이아웃(`grid-template-columns: 1fr auto 1fr;`)으로 전환했습니다.
+  - 양 끝 메뉴 버튼(`.menu-toggle-btn` 및 `.mobile-home-link`)에 각각 `justify-self: start` 및 `justify-self: end` 속성을 부여하여, 가운데 다크 모드 토글 버튼이 사이드 버튼의 가로 너비와 관계없이 화면의 절대 수평 기준 정중앙(50% 지점)에 배치되도록 정렬 규칙을 개선했습니다.
+
+---
+
+## 👤 User
+
+모바일 화면일 때 옆에서 side navigation?이 나올 때 닫기 X 버튼이랑 다크모드 버튼 안 겹치게 해줄래? 이것만 끝나면 markdown문서 전부 업데이트하고 작업 마무리하자.
+
+---
+
+## 🤖 Agent
+
+모바일 환경에서 사이드바가 슬라이드인 되어 열릴 때, 우측 상단에 절대 위치로 고정되는 닫기(X) 버튼(`.sidebar-close-btn`)과 테마 토글 버튼이 서로 겹쳐 레이아웃이 깨지고 클릭 조작이 원활하지 않던 문제를 해결했습니다.
+- **`Note.jsx`**: 사이드바 내부의 테마 토글 버튼에 전용 클래스(`.sidebar-theme-btn`)를 부여했습니다.
+- **`index.css`**: 모바일 미디어 쿼리 블록 내부에 `.sidebar-theme-btn { display: none !important; }`를 선언했습니다. 이를 통해 모바일 뷰일 경우 사이드바 내부의 테마 스위치를 가려주고 닫기(X) 버튼 영역을 침범하지 않도록 안전하게 정교화하였으며, 테마 토글 제어는 이미 모바일 화면 상단에 정밀 정렬되어 노출되고 있는 절대 중앙 토글 스위치로 통합 작동하도록 사용자 인터페이스를 다듬었습니다.
+
+
+
+
+
 
 
