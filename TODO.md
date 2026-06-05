@@ -14,6 +14,10 @@
   - [x] `src/pages/Home.jsx` 하단에 footer 영역 생성 완료
   - [x] 저작권 표시, 제작자 표시, GitHub 저장소 바로가기 링크 및 아이콘(`src/assets/github.svg`) 연동 완료
   - [x] `src/index.css`에 푸터 전용 미니멀 스타일 정의 (여백, 텍스트 색상, 모바일 반응형) 완료
+- **[x] 홈 대시보드 제작자 소개 섹션(About the Creator) 추가**
+  - [x] `src/pages/Home.jsx`의 메인 카드 그리드 하단에 소개 섹션 및 실제 캐릭터 이미지 2개(`tutee.png`, `tutor.png`) 연동 및 파일명 변경 완료
+  - [x] 튜터링 아카이브 취지 및 소개문 1~2줄 추가 및 학과/학번 정보(AI.소프트웨어학과 25학번 리아)로 최종 수정 완료
+  - [x] `src/index.css`에 아바타 원형 정렬 및 반응형 레이아웃 스타일 정의 완료
 
 ---
 
@@ -56,8 +60,9 @@
   - [x] Notion 북마크 노출 최적화를 위한 Open Graph 메타태그 적용 및 유채꽃 대표 이미지 연동 완료
 - **최종 배포 (Deploy)**
   - [x] `gh-pages`와 `.nojekyll` 설정을 통한 GitHub Pages 자동 배포 스크립트 구축 및 실제 배포 완료
-- **홈 대시보드 푸터 (Footer)**
+- **홈 대시보드 푸터 (Footer) 및 소개 섹션**
   - [x] 저작권, 제작자 정보 표시 및 GitHub 로고 아이콘(`src/assets/github.svg`)을 포함한 푸터 연동 완료
+  - [x] 메인 카드 목록 하단에 2개의 캐릭터 사진(`tutee.png`, `tutor.png`) 및 소개 텍스트를 포함한 제작자 소개 카드(About the Creator) 추가 완료
 
 ---
 
