@@ -5,14 +5,20 @@ import canolaPythonLogo from '../assets/canola_python.svg';
 import githubLogo from '../assets/github.svg';
 import tuteeImg from '../assets/tutee.png';
 import tutorImg from '../assets/tutor.png';
+import { Sun, Moon } from 'lucide-react';
 import '../index.css';
 
-export default function Home() {
+export default function Home({ theme, toggleTheme }) {
   return (
     <div className="container">
       <header className="hero">
-        <div className="hero-logo-container">
-          <img src={canolaPythonLogo} alt="Canola Python Logo" className="hero-logo" />
+        <div className="home-header-row">
+          <div className="hero-logo-container">
+            <img src={canolaPythonLogo} alt="Canola Python Logo" className="hero-logo" />
+          </div>
+          <button className="theme-toggle-btn" onClick={toggleTheme} aria-label="Toggle Theme">
+            {theme === 'light' ? <Moon size={20} /> : <Sun size={20} />}
+          </button>
         </div>
         <h1 className="hero-title">Canola Python</h1>
         <p className="hero-subtitle">

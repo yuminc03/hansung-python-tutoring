@@ -717,3 +717,39 @@ a:hover {
 [data-theme='dark'] .footer-github-icon {
   filter: invert(1);
 }
+
+/* Theme Toggle Button */
+.theme-toggle-btn {
+  background: none;
+  border: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  background-color: var(--bg-card);
+  box-shadow: var(--shadow-card);
+}
+
+.theme-toggle-btn:hover {
+  color: var(--point-color);
+  border-color: var(--point-color);
+  transform: scale(1.05);
+}
+
+/* Home.jsx Layout placement */
+.home-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .home-header-row {
+    align-items: center;
+  }
+}
