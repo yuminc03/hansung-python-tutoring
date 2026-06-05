@@ -44,7 +44,7 @@ export default function Home() {
             <span className="creator-title-label">ABOUT THE CREATOR</span>
             <h2 className="creator-name">Yumin Chu</h2>
             <p className="creator-description">
-              미래플러스대학 튜티들과 함께 성장하기 위해 6주간의 파이썬 여정을 기록하는 튜터입니다.<br />
+              6주간의 파이썬 여정을 기록하는 튜터, AI.소프트웨어학과 25학번 추유민입니다.<br />
               유채꽃 가득한 봄날처럼, 쉽고 재미있게 파이썬 프로그래밍을 학습할 수 있도록 돕습니다.
             </p>
           </div>
