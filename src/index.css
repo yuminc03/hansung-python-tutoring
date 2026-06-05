@@ -3,6 +3,7 @@
 :root {
   --bg-main: #FDFDF9; /* 봄볕 느낌의 부드러운 아이보리 옐로우 톤 */
   --bg-card: #FFFFFF;
+  --bg-th: #F3F4F6;
   --text-primary: #111827;
   --text-secondary: #4B5563; /* 조금 더 가독성 높고 부드러운 그레이 */
   --text-tertiary: #9CA3AF;
@@ -13,6 +14,21 @@
   --shadow-card: 0 4px 20px -2px rgba(217, 119, 6, 0.03), 0 2px 8px -1px rgba(0, 0, 0, 0.02);
   --shadow-hover: 0 20px 25px -5px rgba(217, 119, 6, 0.08), 0 10px 10px -5px rgba(217, 119, 6, 0.03);
   --radius-xl: 20px; /* 더 친근하고 둥근 카드 모서리 */
+}
+
+[data-theme='dark'] {
+  --bg-main: #121210; /* 부드럽고 차분한 다크 브라운-블랙 */
+  --bg-card: #1C1C17; /* 조금 더 밝은 카드 다크 브라운-그레이 */
+  --bg-th: #2A2A22;
+  --text-primary: #F3F4F6;
+  --text-secondary: #D1D5DB;
+  --text-tertiary: #6B7280;
+  --point-color: #F59E0B; /* 다크 모드에 어울리는 보다 밝고 선명한 유채꽃 옐로우 */
+  --point-light: #451A03; /* 어두운 오렌지/브라운 톤 배경 */
+  --point-dark: #FEF08A;  /* 밝은 옐로우 텍스트 가독성용 */
+  --border-color: #2D2D24; /* 어두운 모서리 경계 */
+  --shadow-card: 0 4px 20px -2px rgba(0, 0, 0, 0.5), 0 2px 8px -1px rgba(0, 0, 0, 0.3);
+  --shadow-hover: 0 20px 25px -5px rgba(245, 158, 11, 0.1), 0 10px 10px -5px rgba(245, 158, 11, 0.05);
 }
 
 body {
@@ -353,7 +369,7 @@ a:hover {
 }
 
 .note-content-inner th {
-  background-color: #F3F4F6;
+  background-color: var(--bg-th);
   color: var(--text-primary);
   font-weight: 600;
   border-bottom: 2px solid var(--border-color);
@@ -695,4 +711,9 @@ a:hover {
     margin-top: 60px;
     padding-top: 32px;
   }
+}
+
+/* Dark Mode Extra Filters */
+[data-theme='dark'] .footer-github-icon {
+  filter: invert(1);
 }
