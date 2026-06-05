@@ -5,4 +5,9 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   base: '/hansung-python-tutoring/',
   plugins: [react()],
+  build: {
+    chunkSizeWarningLimit: 1500, // 500kB 제한 경고를 1500kB로 상향 조정하여 해결
+  }
 })
+
+
