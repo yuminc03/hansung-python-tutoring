@@ -1,7 +1,7 @@
 # 📅 오늘 작업 리포트 (Today's Work Report)
 
-**일시**: 2026년 6월 2일  
-**작업자**: Antigravity AI & Yumin Chu  
+**일시**: 2026년 6월 5일  
+**작업자**: Antigravity AI & Lia  
 **프로젝트**: 한성 AX 융합 Canola Python 웹사이트  
 
 ---
@@ -59,18 +59,33 @@
   - 클릭 시 새 창에서 GitHub 저장소로 이동하며 안전성 확보를 위한 `rel="noopener noreferrer"` 연동 완료.
   - 전체 웹 테마와 조화로운 미니멀한 회색 톤 텍스트 레이아웃 배치 완료.
 
+### 9. 홈 대시보드 제작자 소개 섹션(About the Creator) 연동
+- **작업 내용**: 6주차 카드 그리드 하단과 푸터 사이에 독립적인 제작자 소개 섹션을 배치했습니다.
+- **적용**: 
+  - 튜터님이 직접 제공해주신 실제 캐릭터 이미지를 각각 튜티(`tutee.png`) 및 튜터(`tutor.png`) 역할에 맞게 매핑하여 적용 완료.
+  - 은은하게 정돈된 미니멀 카드 레이아웃과 튜터 소개 텍스트(AI.소프트웨어학과 25학번 리아) 배치 및 모바일 반응형 세로 레이아웃 최적화 완료.
+
+### 10. 제작자 캐릭터 이미지 파일명 변경 및 스와프 최적화
+- **작업 내용**: 웹사이트 리소스 관리의 직관성을 위해 기존 `creator_dev.png`와 `creator_python.png` 에셋 파일명을 각각 역할에 알맞게 `tutee.png` 및 `tutor.png`로 변경했습니다. 최초 변경 시 튜터와 튜티 이미지 파일명이 서로 반대로 매핑되었던 에러를 감지하여, 두 파일명을 서로 스와프(`tutee.png` ↔ `tutor.png`)하여 완전히 올바르게 정정하고 리액트 코드 내 임포트 및 활용 구문을 최적화했습니다.
+- **적용**: 
+  - `creator_dev.png` (튜터 원본) -> `tutor.png`
+  - `creator_python.png` (튜티 원본) -> `tutee.png`
+  - `Home.jsx` 소스 내 파일 임포트 경로 및 변수명(`tuteeImg`, `tutorImg`) 변경 적용 완료.
+
 ---
 
 ## 📂 작업 완료에 따른 파일 변경 내역
 - [x] [index.html](file:///Users/chuyumin/Documents/github/hansung-python-tutoring/index.html) (SEO, Open Graph 메타태그 및 모바일 앱 아이콘 연동, "Canola Python"으로 사이트 타이틀 개편)
 - [x] [public/manifest.json](file:///Users/chuyumin/Documents/github/hansung-python-tutoring/public/manifest.json) (모바일 PWA 앱 명칭 "Canola Python" 동기화 및 아이콘 매핑 완료)
-- [x] [src/pages/Home.jsx](file:///Users/chuyumin/Documents/github/hansung-python-tutoring/src/pages/Home.jsx) (로고 에셋 추가, 히어로 구조 수정, 메인 타이틀 명칭 Canola Python 변경 및 하단 푸터 영역 연동)
+- [x] [src/pages/Home.jsx](file:///Users/chuyumin/Documents/github/hansung-python-tutoring/src/pages/Home.jsx) (로고 및 제작자 캐릭터 에셋 추가, 히어로 구조 수정, 메인 타이틀 명칭 Canola Python 변경, 하단 푸터 및 제작자 소개 영역 연동 완료)
 - [x] [src/pages/Note.jsx](file:///Users/chuyumin/Documents/github/hansung-python-tutoring/src/pages/Note.jsx) (사이드바 로고 추가 및 링크 연동)
-- [x] [src/index.css](file:///Users/chuyumin/Documents/github/hansung-python-tutoring/src/index.css) (유채꽃 전용 팔레트, 카드 4면 테두리, 그림자, 사이드바 액티브 디자인 수정 및 푸터 스타일 정의 완료)
+- [x] [src/index.css](file:///Users/chuyumin/Documents/github/hansung-python-tutoring/src/index.css) (유채꽃 전용 팔레트, 카드 4면 테두리, 그림자, 사이드바 액티브 디자인 수정 및 푸터/제작자 소개 스타일 정의 완료)
 - [x] [src/assets/github.svg](file:///Users/chuyumin/Documents/github/hansung-python-tutoring/src/assets/github.svg) (푸터 GitHub 링크용 신규 로고 에셋 추가 완료)
-- [x] [TODO.md](file:///Users/chuyumin/Documents/github/hansung-python-tutoring/TODO.md) (전체 할 일 목록 완료 체크 완료 및 푸터 작업 기록 갱신)
-- [x] [PLAN.md](file:///Users/chuyumin/Documents/github/hansung-python-tutoring/PLAN.md) (현재 상태 기재 갱신 및 푸터 기획안 추가 완료)
-- [x] [TODAY_WORK.md](file:///Users/chuyumin/Documents/github/hansung-python-tutoring/TODAY_WORK.md) (오늘 작업 리포트 및 웹사이트명 개편/푸터 연동 내역 추가 완료)
+- [x] [src/assets/tutee.png](file:///Users/chuyumin/Documents/github/hansung-python-tutoring/src/assets/tutee.png) (제작자 소개용 튜티 캐릭터 이미지 파일명 변경 완료)
+- [x] [src/assets/tutor.png](file:///Users/chuyumin/Documents/github/hansung-python-tutoring/src/assets/tutor.png) (제작자 소개용 튜터 캐릭터 이미지 파일명 변경 완료)
+- [x] [TODO.md](file:///Users/chuyumin/Documents/github/hansung-python-tutoring/TODO.md) (전체 할 일 목록 완료 체크 완료 및 푸터/제작자 소개 작업 기록 갱신)
+- [x] [PLAN.md](file:///Users/chuyumin/Documents/github/hansung-python-tutoring/PLAN.md) (현재 상태 기재 갱신 및 푸터/제작자 소개 기획안 추가 완료)
+- [x] [TODAY_WORK.md](file:///Users/chuyumin/Documents/github/hansung-python-tutoring/TODAY_WORK.md) (오늘 작업 리포트 및 웹사이트명 개편/푸터/제작자 소개 연역 추가 완료)
 - [x] [PREVIOUS_HISTORY.md](file:///Users/chuyumin/Documents/github/hansung-python-tutoring/PREVIOUS_HISTORY.md) (진행된 프롬프트 기준 대화 이력 최종 백업 완료)
 
 ---
