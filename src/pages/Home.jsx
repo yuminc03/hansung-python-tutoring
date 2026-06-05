@@ -37,8 +37,8 @@ export default function Home() {
       <section className="creator-section">
         <div className="creator-card">
           <div className="creator-avatars">
-            <img src={creatorDevImg} alt="Developer Yumin Chu" className="creator-avatar" />
-            <img src={creatorPythonImg} alt="Python Mascot" className="creator-avatar" />
+            <img src={creatorDevImg} alt="Tutor Yumin Chu" className="creator-avatar" />
+            <img src={creatorPythonImg} alt="Tutee" className="creator-avatar" />
           </div>
           <div className="creator-info">
             <span className="creator-title-label">ABOUT THE CREATOR</span>
