@@ -411,9 +411,10 @@ a:hover {
 
   /* Mobile Top Navigation Bar */
   .mobile-header {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
     align-items: center;
-    justify-content: space-between;
+    justify-items: center;
     padding: 16px 20px;
     background-color: var(--bg-card);
     border-bottom: 1px solid var(--border-color);
@@ -435,6 +436,7 @@ a:hover {
     padding: 6px 12px;
     border-radius: 8px;
     transition: background-color 0.2s;
+    justify-self: start;
   }
 
   .menu-toggle-btn:hover {
@@ -445,6 +447,7 @@ a:hover {
     font-size: 0.95rem;
     font-weight: 600;
     color: var(--point-color);
+    justify-self: end;
   }
 
   /* Slide-in Overlay Sidebar on Mobile */
