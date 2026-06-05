@@ -865,15 +865,99 @@ github.png 이미지를 @[src/assets/github.svg] 로 수정했어. 문서에 반
 
 ## 👤 User
 
-footer에 내 이름을 chuyumin이 아닌 Yumin Chu로 바꾸자!
+footer에 내 이름을 chuyumin이 아닌 Lia로 바꾸자!
 
 ---
 
 ## 🤖 Agent
 
-웹사이트의 푸터 저작권 영역에 표시되던 영문 이름을 `chuyumin`에서 **`Yumin Chu`**로 변경하였습니다.
+웹사이트의 푸터 저작권 영역에 표시되던 영문 이름을 `chuyumin`에서 **`Lia`**로 변경하였습니다.
 
-- **`Home.jsx`**: 푸터 렌더링 텍스트 내 저작자 이름을 `Yumin Chu`로 변경했습니다.
-- **`PLAN.md` / `TODAY_WORK.md` / `PREVIOUS_HISTORY.md`**: 관련 기획 문서 및 작업 완료 보고서상의 제작자/작업자 명칭을 모두 `Yumin Chu`로 동기화 완료했습니다.
+- **`Home.jsx`**: 푸터 렌더링 텍스트 내 저작자 이름을 `Lia`로 변경했습니다.
+- **`PLAN.md` / `TODAY_WORK.md` / `PREVIOUS_HISTORY.md`**: 관련 기획 문서 및 작업 완료 보고서상의 제작자/작업자 명칭을 모두 `Lia`로 동기화 완료했습니다.
 
 ---
+
+## 👤 User
+
+@[src/pages/Home.jsx] 에 제작자 소개도 간단하게 넣으면 좋겠어. @[TODO.md] , @[PLAN.md] 문서를 업데이트해줘. 그런데 제작자 소개에는 간단한 캐릭터 사진 두 개랑 간단한 소개문 한두줄 들어갈 것 같아. 어느 위치에 만들지?
+
+---
+
+## 🤖 Agent
+
+제작자 소개 섹션을 배치하기 가장 좋은 위치는 홈 대시보드의 **카드 그리드(Main Grid) 하단과 푸터(Footer) 사이**입니다. 이렇게 하면 아카이브 목록이 방해받지 않고, 스크롤을 끝까지 내린 튜티들이 자연스럽게 제작자 소개와 캐릭터를 마주할 수 있습니다.
+
+- **이미지 생성 (`creator_dev.png`, `creator_python.png`)**: AI 이미지 생성기를 활용해 유채꽃 테마에 부합하는 귀여운 개발자 아바타와 공부하는 파이썬 뱀 캐릭터 이미지를 생성하여 프로젝트 에셋에 추가했습니다.
+- **`Home.jsx`**: 그리드 하단에 `About the Creator` 카드 프레임을 생성하고 두 개의 캐릭터 아바타와 튜터 소개 텍스트를 연동했습니다.
+- **`index.css`**: 데스크톱 및 모바일 반응형(세로 카드 정렬)에 맞추어 제작자 카드의 미니멀 골드 테두리, 원형 아바타 호버 스케일 업 애니메이션 스타일을 구축했습니다.
+- **`PLAN.md` / `TODO.md` / `TODAY_WORK.md`**: 소개 섹션 기획 명세, 할 일 항목 추가 및 즉시 완료(`[x]`) 처리, 최종 오늘 작업 완료 리포트에 이력을 꼼꼼하게 반영하였습니다.
+
+---
+
+## 👤 User
+
+미래플러스대학 튜티들과 함께 성장하기 위해 6주간의 파이썬 여정을 기록하는 튜터입니다. @[src/pages/Home.jsx] 문장을 수정하고 싶어. 
+6주간의 파이썬 여정을 기록하는 튜터, AI.소프트웨어학과 25학번 리아입니다. 
+
+---
+
+## 🤖 Agent
+
+`Home.jsx`의 제작자 소개 단락 첫째 줄 문장을 튜터님의 소속 학과 및 학번 정보가 포함된 **"6주간의 파이썬 여정을 기록하는 튜터, AI.소프트웨어학과 25학번 리아입니다."**로 업데이트하고, 모든 관련 마크다운 문서들(`TODO.md`, `PLAN.md`, `TODAY_WORK.md`, `PREVIOUS_HISTORY.md`)의 설명도 이에 맞춰 최신화하였습니다.
+
+---
+
+## 👤 User
+
+@[src/assets/creator_dev.png] , @[src/assets/creator_python.png] 이미지를 바꾸고 싶어. 튜터와 튜티 이미지를 첨부한걸로 바꿔줘. 제작자는 이렇게 두 명인데 tuter.png가 튜터이고 tutee.png가 튜티야. 
+
+---
+
+## 🤖 Agent
+
+튜터님께서 직접 전달해주신 미모지(Memoji) 캐릭터 에셋 파일(`tuter.png` -> `creator_dev.png`, `tutee.png` -> `creator_python.png`)을 프로젝트의 에셋 폴더에 덮어씌워 완전히 연동을 완료했습니다.
+
+- **`Home.jsx`**: 두 이미지의 의미에 알맞도록 alt 텍스트를 `Tutor Lia` 및 `Tutee`로 수정하여 웹 접근성을 향상시켰습니다.
+- **`PLAN.md` / `TODO.md` / `TODAY_WORK.md` / `PREVIOUS_HISTORY.md`**: 아바타 명세 및 변경 이력 등을 실제 튜터/튜티 미모지 캐릭터 적용 완료 내역으로 최종 동기화 완료했습니다.
+
+---
+
+## 👤 User
+
+@[src/assets/creator_dev.png] 는 tutee.png로, @[src/assets/creator_python.png] 은 tutor.png로 이름을 바꿔줘.
+
+---
+
+## 🤖 Agent
+
+요청하신 대로 `creator_dev.png` 에셋 파일명을 `tutee.png`로, `creator_python.png`를 `tutor.png`로 파일명을 변경하고, `src/pages/Home.jsx`의 임포트 경로 및 변수명을 `tuteeImg`, `tutorImg`로 수정하여 소스 코드 내 매핑을 완료했습니다. 또한 관련 문서(`PLAN.md`, `TODO.md`, `TODAY_WORK.md`, `PREVIOUS_HISTORY.md`)들에 해당 명칭 변경 사항을 일치하게 동기화하였습니다.
+
+---
+
+## 👤 User
+
+@[src/assets/tutee.png] 와 @[src/assets/tutor.png] 의 파일명이 서로 바뀌었어. 파일명 수정해줘.
+
+---
+
+## 🤖 Agent
+
+`tutee.png`와 `tutor.png` 이미지의 내용이 서로 바뀌었음을 인지하고, 디스크 상에서 두 이미지 파일의 이름을 상호 스와프(Swap)하여 올바른 역할 매핑(튜티 캐릭터 ↔ 튜터 캐릭터)으로 정정하였습니다. 이를 통해 소스 코드(`Home.jsx`) 및 관리 문서(`TODAY_WORK.md`, `PREVIOUS_HISTORY.md`)의 무결성을 확보했습니다.
+
+---
+
+## 👤 User
+
+Yumin Chu나 추유민이라고 적힌 내 본명을 리아 라는 닉네임으로 변경해줘. 내 본명은 Github에 써있어서 굳이 웹사이트에 안적어도 될 것 같아.
+
+---
+
+## 🤖 Agent
+
+웹사이트의 브랜딩 및 튜터 표시 영역에서 실명을 노출하지 않기 위해, `Yumin Chu`/`추유민`으로 기재된 모든 부분을 닉네임인 `Lia`/`리아`로 전면 교체하였습니다.
+- **`Home.jsx`**: 저작권 정보, 제작자 이름 및 소개 영역의 실명을 `Lia` 및 `리아`로 변경했습니다.
+- **`PLAN.md` / `TODO.md` / `TODAY_WORK.md` / `PREVIOUS_HISTORY.md`**: 문서 내에 표기된 작업자 및 설명 문구 상의 실명을 모두 `Lia`/`리아`로 동기화 완료했습니다.
+
+
+
